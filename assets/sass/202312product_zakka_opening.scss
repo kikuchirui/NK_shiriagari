@@ -1,0 +1,383 @@
+@charset "UTF-8";
+$break_point: 768px;
+$bg_color: #fffef1;
+$base_w_sp: 750;
+$base_w: 2732;
+
+
+@mixin mq() {
+  @media screen and (min-width: $break_point) {
+    @content;
+  }
+}
+@mixin mq_maxH() {
+  @media screen and (max-height: $break_pointH) {
+    @content;
+  }
+}
+
+@mixin font_size_responsive($size: 30, $pc_vw: false) {
+  $size_vw_sp: calc($size/($base_w_sp/100));
+  $size_vw_pc: calc($size/($base_w/100));
+  $size_rem: calc($size/20);
+
+  font-size: #{$size_vw_sp}vw;
+  @media screen and (min-width: $break_point) {
+      @if $pc_vw == true {
+          font-size: #{$size_vw_pc}vw;
+      }
+      @else {
+          font-size: #{$size_rem}rem;
+      }
+  }
+}
+
+@mixin DNPShueiMinPr6N_L(){
+  font-family: "dnp-shuei-mincho-pr6n", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@mixin DNPShueiMinPr6N_M(){
+  font-family: "dnp-shuei-mincho-pr6n", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+@mixin DNPShueiMinPr6N_B(){
+  font-family: "dnp-shuei-mincho-pr6n", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TsukushiAMaruGothic";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/static/docs/nikoand/pages/202312product_zakka/assets/font/TsukushiAMGothic/TsukushiAMaruGothic-r.ttf"),
+       url("/static/docs/nikoand/pages/202312product_zakka/assets/font/TsukushiAMGothic/TsukushiAMaruGothic-r.otf"), 
+       url("/static/docs/nikoand/pages/202312product_zakka/assets/font/TsukushiAMGothic/TsukushiAMaruGothic-r.woff") format("woff"), 
+       url("/static/docs/nikoand/pages/202312product_zakka/assets/font/TsukushiAMGothic/TsukushiAMaruGothic-r.woff2")format("woff2");    
+  }
+
+@font-face {
+  font-family: "TsukushiAMaruGothic-B";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/static/docs/nikoand/pages/202312product_zakka/assets/font/TsukushiAMGothic/TsukushiAMaruGothic-b.ttf"),
+       url("/static/docs/nikoand/pages/202312product_zakka/assets/font/TsukushiAMGothic/TsukushiAMaruGothic-b.otf"), 
+       url("/static/docs/nikoand/pages/202312product_zakka/assets/font/TsukushiAMGothic/TsukushiAMaruGothic-b.woff") format("woff"), 
+       url("/static/docs/nikoand/pages/202312product_zakka/assets/font/TsukushiAMGothic/TsukushiAMaruGothic-b.woff2")format("woff2");    
+  }
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /*font-family: inherit;*/
+  font-weight: normal;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+*, ::after, ::before {
+	box-sizing: border-box;
+	border-style: solid;
+	border-width: 0
+}
+html {
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent
+}
+address, blockquote, dl, figure, form, iframe, p, pre, table {
+	margin: 0
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size: inherit;
+	font-weight: inherit;
+	margin: 0
+}
+ol, ul {
+	margin: 0;
+	padding: 0;
+	list-style: none
+}
+a {
+	background-color: transparent;
+	text-decoration: none;
+	color: inherit
+}
+html {
+	font-size: 62.5%
+}
+img, svg, video {
+	width: 100%;
+	height: auto;
+	vertical-align: bottom
+}
+img {
+  user-drag: none;
+  -webkit-user-drag: none;
+}
+@media screen and (max-width:$break_point) {
+	.sp {
+		display: block;
+	}
+	.pc {
+		display: none!important;
+	}
+}
+@media screen and (min-width:$break_point) {
+	.sp {
+		display: none!important;
+	}
+	.pc {
+		display: block;
+	}
+}
+
+body, html {
+	width: 100%;
+	height: 100%;
+}
+
+
+.page-wrapper{
+  height: 100vh;
+  height: 100svh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  @include mq{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.main-catch{
+  position: absolute;
+  width: calc(39/$base_w_sp)*100%;
+  top: calc(50/1270)*100%;
+  right: calc(38/$base_w_sp)*100%;
+  z-index: 4;
+}
+.heading{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  @include mq{
+    margin-top: calc(79/1054)*100%;
+  }
+}
+
+// .heading-ttl{
+//   font-family: "TsukushiAMaruGothic-B";
+//   @include font_size_responsive(46,true);
+//   color: #2c0801;
+//   -ms-writing-mode: tb-rl;
+//   writing-mode: vertical-rl;
+//   line-height: calc(61/46);
+// }
+
+.heading-txt{
+  @include DNPShueiMinPr6N_M();
+  @include font_size_responsive(22,true);
+  line-height: calc(38/22);
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  @include mq{
+    margin-right: calc(50/1054)*100%;
+  }
+}
+
+.heading-txt2{
+  margin-right: calc(49/1054)*100%;
+}
+
+.main-ttl-wrapper{
+  @include mq{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.main-ttl{
+  width: calc(384/$base_w_sp)*100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 3;
+
+  @include mq{
+    width: calc(442/630)*100%;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+  }
+}
+
+
+
+.page1{
+  height: 50%;
+  background-color: #7eb8cb;
+  position: relative;
+  display: block;
+
+  @include mq{
+    width: calc(1054/$base_w)*100%;
+    height: 100%;
+
+  }
+
+  .heading-ttl{
+    @include mq{
+      width: calc(165/1054)*100%;
+    }
+  }
+}
+
+.page1-main{
+  width: calc(542/$base_w_sp)*100%;
+  padding-top: calc(50/$base_w_sp)*100%;
+  margin-left: calc(115/$base_w_sp)*100%;
+
+  @include mq{
+    width: calc(881/1054)*100%;
+    margin: calc(80/1054)*100% 0 0 calc(64/1054)*100%;
+    padding: 0;
+  }
+}
+
+.page-btn{
+  width: calc(272/1054)*100%;
+  padding: calc(16/1054)*100% 0 calc(23/1054)*100% 0;
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 36px;
+  font-family: "TsukushiAMaruGothic-B";
+  @include font_size_responsive(28,true);
+  position: absolute;
+  bottom: calc(121px/2);
+  left: 50%;
+  transform: translateX(-50%);
+
+  .page-btn-txt{
+    width: calc(153/272)*100%;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.page-ofuda{
+  position: absolute;
+  bottom: calc(40/635)*100%;
+  left: calc(40/$base_w_sp)*100%;
+  width: calc(67/$base_w_sp)*100%;
+
+  @include mq{
+    width: calc(67/1054)*100%;
+    left: auto;
+    right: calc(60/1054)*100%;
+    bottom: auto;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.page2{
+  height: 50%;
+  position: relative;
+  display: block;
+
+  @include mq{
+    padding-top: 100vh;
+    width: calc(1054/$base_w)*100%;
+  }
+
+  .page-ofuda{
+    top: calc(40/635)*100%;
+    @include mq{
+      top: 50%;
+      left: calc(50/1054)*100%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .heading{
+    @include mq{
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      width: 100%;
+    }
+  }
+
+  .heading-ttl{
+    @include mq{
+      width: calc(161/1054)*100%;
+    }
+  }
+}
+
+.page2-main{
+  height: 100%;
+
+  @include mq{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+  }
+
+  img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.yoyaku-ofuda{
+  width: calc(115/$base_w_sp)*100%;
+  position: absolute;
+  bottom: calc(53/635)*100%;
+  left: calc(40/$base_w_sp)*100%;
+
+  @include mq{
+    width: calc(116/1054)*100%;
+    margin-right: calc(57/1054)*100%;
+    position: relative;
+    bottom: auto;
+    left: auto;
+  }
+}
+
+.main-ttl-wrapper{
+  width: calc(100% - ((1054/2732*100%)*2));
+
+  @include mq{
+    position: relative;
+  }
+}
+
+
+.main-lead{
+  @include font_size_responsive(36,true);
+  color: #2c0801;
+  font-family: "TsukushiAMaruGothic-B";
+  text-align: center;
+  line-height: calc(50/36);
+  @include mq{
+    margin-top: calc(70/625)*100%;
+    width: calc(368/625)*100%;
+  }
+}
+
+
