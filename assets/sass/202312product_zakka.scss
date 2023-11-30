@@ -308,7 +308,8 @@ body {
       justify-content: flex-start;
       align-items: flex-start;
       width: fit-content;
-      background: $bg_color;
+      // background: $bg_color;
+      background: linear-gradient(90deg, $bg_color, #343c55);
       transition: box-shadow 0.5s ease 3s;
       @include mq_maxH() {
         height: 100%;
