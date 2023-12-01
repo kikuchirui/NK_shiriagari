@@ -51,6 +51,7 @@ $(function () {
 			}
 		
 			scrollFunction();
+			modalToggle();
 		},
 		scroll: function () {
 			winH = $win.height();
@@ -112,5 +113,23 @@ $(function () {
 		});
 	  
 	}
+
+	function modalToggle(){
+		var $modal = $('.modal-wrapper');
+
+		$('.modal-link').click(function(){
+			$modal.addClass('show');
+		});
+		$modal.click(function(e) {
+			if(!$(e.target).closest('.modal').length) {
+				$modal.removeClass('show');
+			} 
+		})
+		$('.close-btn').click(function(){
+			$modal.removeClass('show');
+		});
+	}
+
+	
   
 });
