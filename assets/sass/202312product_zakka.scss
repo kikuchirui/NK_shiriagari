@@ -296,6 +296,8 @@ body {
           }
         }
       }
+
+      
     }
     
     .scroll-inner {
@@ -537,7 +539,7 @@ body {
               font-size: (26px/2);
               margin-bottom: 5.5px;
               @include mq_maxH() {
-                margin-bottom: calc((5.5 / 1270) * #{$new_vh});
+                margin-bottom: calc((11 / 1270) * #{$new_vh});
                 font-size: calc((26 / 1270) * #{$new_vh});
               }
             }
@@ -558,15 +560,12 @@ body {
               margin-bottom:calc(26px/2);
               @include DNPShueiMinPr6N_B();
               @include mq_maxH() {
-                // margin-bottom: (10/1270) * #{$new_vh});
-                margin-bottom: calc((10 / 1270) * #{$new_vh});
+                margin-bottom: calc((26 / 1270) * #{$new_vh});
+                font-size: calc((22 / 1270) * #{$new_vh});
               }
               .price {
-                // @include font_DNP_ShueiMGoStd_B();
                 margin-right: (30px/2);
                 @include mq_maxH() {
-                  font-size: calc((28 / 1270) * #{$new_vh});
-                  // margin-right: (30/1270) * #{$new_vh});
                   margin-right: calc((30 / 1270) * #{$new_vh});
                 }
 
@@ -574,6 +573,10 @@ body {
                   font-size: 10px;
                   display: inline-block;
                   margin-left: 5.5px;
+                  @include mq_maxH() {
+                    font-size: calc((20/ 1270) * #{$new_vh});
+                    margin-left: calc((11/ 1270) * #{$new_vh});
+                  }
                 }
               }
               .buy-btn {
@@ -581,45 +584,25 @@ body {
 
 
                 @include mq_maxH() {
-                  font-size: calc((24 / 1270) * #{$new_vh});
+                  width: calc((80 / 1270) * #{$new_vh});
                 }
               }
             }
             .credit-wrap{
               display: flex;
               gap: calc(36px/2);
+              @include mq_maxH() {
+                gap: calc((36 / 1270) * #{$new_vh});
+              }
             }
           }
           &.block1 {
             .ph {
               width: (851px/2);
               margin-top: (98px/2);
-              transform: rotate(-5deg);
               @include mq_maxH() {
-                // width: (755/1270) * #{$new_vh});
-                // margin-top: (180/1270) * #{$new_vh});
-                width: calc((755 / 1270) * #{$new_vh});
-                // margin-top: calc((180 / 1270) * #{$new_vh});
-                margin-top: (180/755)*100%;
-              }
-            }
-            .ph2 {
-              width: (776px/2);
-              position: absolute;
-              top: 0;
-              right: 0;
-              margin-top: (490px/2);
-              margin-right: -(510px/2);
-              transform: rotate(-5deg);
-              @include mq_maxH() {
-                // width: (776/1270) * #{$new_vh});
-                // margin-top: (490/1270) * #{$new_vh});
-                // margin-right: -(510/1270) * #{$new_vh});
-                width: calc((776 / 1270) * #{$new_vh});
-                // margin-top: calc((490 / 1270) * #{$new_vh});
-                // margin-right: calc(-(510 / 1270) * #{$new_vh});
-                margin-top: (490/776)*100%;
-                margin-right: -(510/776)*100%;
+                width: calc((851 / 1270) * #{$new_vh});
+                margin-top: calc((98 / 1270) * #{$new_vh});
               }
             }
             .txt-contents {
@@ -628,16 +611,16 @@ body {
               position: relative;
               z-index: 3;
               @include mq_maxH() {
-                // width: (409/1270) * #{$new_vh});
-                // margin-top: -(175/1270) * #{$new_vh});
                 width: calc((409 / 1270) * #{$new_vh});
-                // margin-top: calc(-(175 / 1270) * #{$new_vh});
-                margin-top: -(175/775)*100%;
+                margin-top: calc((50 / 1270) * #{$new_vh});
               }
             }
 
             .detail{
               width:calc(319px/2);
+              @include mq_maxH() {
+                width: calc((319 / 1270) * #{$new_vh});
+              }
             }
 
             .deco-illust {
@@ -648,9 +631,9 @@ body {
               margin-top: (24px/2);
               margin-right: -(325px/2);
               @include mq_maxH() {
-                width: calc((358/1270) * #{$new_vh});
-                // margin-right: calc(-(90/1270) * #{$new_vh});
-                margin-right: -(90/775)*100%;
+                width: calc((293/1270) * #{$new_vh});
+                margin-top: calc((24/1270) * #{$new_vh});
+                margin-right: calc((-325/1270) * #{$new_vh});
               }
             }
             .deco-crown {
@@ -660,9 +643,8 @@ body {
               left: 0;
               margin-top: (115px/2);
               @include mq_maxH() {
-                width: calc((358/1270) * #{$new_vh});
-                // margin-right: calc(-(90/1270) * #{$new_vh});
-                margin-right: -(90/775)*100%;
+                width: calc((263/1270) * #{$new_vh});
+                margin-top: calc((115/1270) * #{$new_vh});
               }
             }
           }
@@ -670,13 +652,13 @@ body {
             margin-top: calc(740px/2);
             margin-left: -240px;
             @include mq_maxH() {
-              // margin-left: (550/1270) * #{$new_vh});
-              margin-left: calc((550/1270) * #{$new_vh});
+              margin-left: calc((-480/1270) * #{$new_vh});
+              margin-top: calc((740/1270) * #{$new_vh});
             }
             .ph {
               width: (708px/2);
               @include mq_maxH() {
-                width: calc((401/1270) * #{$new_vh});
+                width: calc((708/1270) * #{$new_vh});
               }
             }
             
@@ -684,23 +666,27 @@ body {
               margin-top: calc(37px/2);
               margin-left: 40px;
               @include mq_maxH() {
-                margin-top: calc(-(45/1270) * #{$new_vh});
+                margin-top: calc((37/1270) * #{$new_vh});
+                margin-left: calc((80/1270) * #{$new_vh});
               }
 
               .credit-wrap{
                 display: flex;
                 gap: calc(36px/2);
+                @include mq_maxH() {
+                 gap: calc((36/1270) * #{$new_vh});
+                }
               }
               .detail {
                 width: (624px/2);
                 @include mq_maxH() {
-                  width: calc((407/1270) * #{$new_vh});
+                  width: calc((624/1270) * #{$new_vh});
                 }
               }
               .credit {
                 width: (237px/2);
                 @include mq_maxH() {
-                  width: calc((470/1270) * #{$new_vh});
+                  width: calc((237/1270) * #{$new_vh});
                 }
               }
             }
@@ -712,6 +698,12 @@ body {
               width: calc(290px/2);
               margin-top: calc(261px/2);
               margin-left: calc(-436px/2);
+
+              @include mq_maxH() {
+                width: calc((290/1270) * #{$new_vh});
+                margin-top: calc((261/1270) * #{$new_vh});
+                margin-left: calc((-436/1270) * #{$new_vh});
+              }
             }
             .deco-illust2{
               position: absolute;
@@ -720,6 +712,25 @@ body {
               width: calc(274px/2);
               margin-top: calc(445px/2);
               margin-left: calc(-210px/2);
+              @include mq_maxH() {
+                width: calc((274/1270) * #{$new_vh});
+                margin-top: calc((445/1270) * #{$new_vh});
+                margin-left: calc((-210/1270) * #{$new_vh});
+              }
+            }
+
+            .deco-illust3{
+              position: absolute;
+              top: 0;
+              right: 0;
+              margin-top: calc(-359px/2);
+              margin-right: calc(37px/2);
+              width: calc(345px/2);
+              @include mq_maxH() {
+                width: calc((345/1270) * #{$new_vh});
+                margin-top: calc((-359/1270) * #{$new_vh});
+                margin-right: calc((37/1270) * #{$new_vh});
+              }
             }
 
             .deco-crown{
@@ -729,22 +740,40 @@ body {
               width: calc(250px/2);
               margin-left: calc(-128px/2);
               margin-top: calc(65px/2);
+              @include mq_maxH() {
+                width: calc((250/1270) * #{$new_vh});
+                margin-top: calc((65/1270) * #{$new_vh});
+                margin-left: calc((-128/1270) * #{$new_vh});
+              }
             }
            
           }
 
           &.block3{
             margin-top: calc(288px/2);
+            @include mq_maxH() {
+              margin-top: calc((288/1270) * #{$new_vh});
+            }
             .ph{
               width: calc(582px/2);
+              @include mq_maxH() {
+                width: calc((582/1270) * #{$new_vh});
+              }
             }
 
             .txt-contents{
               margin-top: 20px;
               margin-left: calc(84px/2);
+              @include mq_maxH() {
+                margin-top: calc((40/1270) * #{$new_vh});
+                margin-left: calc((84/1270) * #{$new_vh});
+              }
               
               .detail{
                 width: calc(396px/2);
+                @include mq_maxH() {
+                  width: calc((396/1270) * #{$new_vh});
+                }
               }
             }
 
@@ -756,6 +785,11 @@ body {
               right: 0;
               margin-top: calc(-241px/2);
               margin-right: calc(197px/2);
+              @include mq_maxH() {
+                width: calc((112/1270) * #{$new_vh});
+                margin-top: calc((-241/1270) * #{$new_vh});
+                margin-right: calc((197/1270) * #{$new_vh});
+              }
             }
             .deco-illust2{
               width: calc(131px/2);
@@ -764,6 +798,11 @@ body {
               right: 0;
               margin-top: calc(-250px/2);
               margin-right: calc(45px/2);
+              @include mq_maxH() {
+                width: calc((131/1270) * #{$new_vh});
+                margin-top: calc((-250/1270) * #{$new_vh});
+                margin-right: calc((45/1270) * #{$new_vh});
+              }
             }
             .deco-illust3{
               width: calc(202px/2);
@@ -772,6 +811,11 @@ body {
               right: 0;
               margin-top: calc(-238px/2);
               margin-right: calc(-182px/2);
+              @include mq_maxH() {
+                width: calc((202/1270) * #{$new_vh});
+                margin-top: calc((-238/1270) * #{$new_vh});
+                margin-right: calc((-182/1270) * #{$new_vh});
+              }
             }
             .deco-illust4{
               width: calc(223px/2);
@@ -780,6 +824,11 @@ body {
               right: 0;
               margin-top: calc(703px/2);
               margin-right: calc(300px/2);
+              @include mq_maxH() {
+                width: calc((223/1270) * #{$new_vh});
+                margin-top: calc((703/1270) * #{$new_vh});
+                margin-right: calc((300/1270) * #{$new_vh});
+              }
             }
 
             .deco-illust5{
@@ -789,6 +838,11 @@ body {
               right: 0;
               margin-top: calc(708px/2);
               margin-right: calc(-86px/2);
+              @include mq_maxH() {
+                width: calc((333/1270) * #{$new_vh});
+                margin-top: calc((708/1270) * #{$new_vh});
+                margin-right: calc((-86/1270) * #{$new_vh});
+              }
             }
 
             .deco-crown{
@@ -798,6 +852,11 @@ body {
               right: 0;
               margin-top: calc(-117px/2);
               margin-right: calc(327px/2);
+              @include mq_maxH() {
+                width: calc((250/1270) * #{$new_vh});
+                margin-top: calc((-117/1270) * #{$new_vh});
+                margin-right: calc((327/1270) * #{$new_vh});
+              }
             }
           }
 
@@ -805,15 +864,30 @@ body {
             margin-top: calc(120px/2);
             margin-left: calc(83px/2);
 
+            @include mq_maxH() {
+              margin-top: calc((120/1270) * #{$new_vh});
+              margin-left: calc((83/1270) * #{$new_vh});
+            }
+
             .ph{
               width: calc(850px/2);
+              @include mq_maxH() {
+                width: calc((850/1270) * #{$new_vh});
+              }
             }
             .txt-contents{
               margin-top: calc(-150px/2);
               margin-left: calc(51px/2);
+              @include mq_maxH() {
+                margin-top: calc((-150/1270) * #{$new_vh});
+                margin-left: calc((51/1270) * #{$new_vh});
+              }
             }
             .detail{
               width: calc(396px/2);
+              @include mq_maxH() {
+                width: calc((396/1270) * #{$new_vh});
+              }
             }
 
             .deco-illust1{
@@ -823,6 +897,11 @@ body {
               right: 0;
               margin-top: calc(871px/2);
               margin-right: calc(-220px/2);
+              @include mq_maxH() {
+                width: calc((434/1270) * #{$new_vh});
+                margin-top: calc((871/1270) * #{$new_vh});
+                margin-right: calc((-220/1270) * #{$new_vh});
+              }
             }
 
             .deco-crown{
@@ -832,21 +911,40 @@ body {
               left: 0;
               margin-top: calc(663px/2);
               margin-left: calc(-143px/2);
+              @include mq_maxH() {
+                width: calc((263/1270) * #{$new_vh});
+                margin-top: calc((663/1270) * #{$new_vh});
+                margin-left: calc((-143/1270) * #{$new_vh});
+              }
             }
           }
 
           &.block5{
             margin-top: calc(38px/2);
             margin-left: calc(-147px/2);
+            @include mq_maxH() {
+              margin-top: calc((38/1270) * #{$new_vh});
+              margin-left: calc((-147/1270) * #{$new_vh});
+            }
             .ph{
               width: calc(602px/2);
+              @include mq_maxH() {
+                width: calc((602/1270) * #{$new_vh});
+              }
             }
 
             .txt-contents{
               margin-left: calc(188px/2);
+              @include mq_maxH() {
+                margin-left: calc((188/1270) * #{$new_vh});
+              }
 
               .detail{
                 width: calc(396px/2);
+
+                @include mq_maxH() {
+                  width: calc((396/1270) * #{$new_vh});
+                }
               }
             }
 
@@ -857,6 +955,12 @@ body {
               left: 0;
               margin-top: -11px;
               margin-left: calc(119px/2);
+
+              @include mq_maxH() {
+                width: calc((365/1270) * #{$new_vh});
+                margin-top: calc((-22/1270) * #{$new_vh});
+                margin-left: calc((119/1270) * #{$new_vh});
+              }
             }
 
             .deco-illust1{
@@ -866,24 +970,43 @@ body {
               right: 0;
               margin-right: calc(-282px/2);
               margin-top: 3px;
+              @include mq_maxH() {
+                width: calc((230/1270) * #{$new_vh});
+                margin-right: calc((-282/1270) * #{$new_vh});
+                margin-top: calc((6/1270) * #{$new_vh});
+              }
             }
           }
 
           &.block6{
             margin-top: calc(112px/2);
             margin-left: 4px;
+            @include mq_maxH() {
+              margin-top: calc((112/1270) * #{$new_vh});
+              margin-left: calc((8/1270) * #{$new_vh});
+            }
             .ph{
               width: calc(959px/2);
               position: relative;
               z-index: 2;
+              @include mq_maxH() {
+                width: calc((959/1270) * #{$new_vh});
+              }
             }
 
             .txt-contents{
               margin-top: calc(-140px/2);
               margin-left: calc(-171px/2);
+              @include mq_maxH() {
+                margin-top: calc((-140/1270) * #{$new_vh});
+                margin-left: calc((-171/1270) * #{$new_vh});
+              }
 
               .detail{
                 width: calc(624px/2);
+                @include mq_maxH() {
+                  width: calc((624/1270) * #{$new_vh});
+                }
               }
             }
 
@@ -895,13 +1018,24 @@ body {
               margin-top: calc(770px/2);
               margin-left: calc(-32px/2);
               z-index: 1;
+              @include mq_maxH() {
+                width: calc((394/1270) * #{$new_vh});
+                margin-top: calc((770/1270) * #{$new_vh});
+                margin-left: calc((-32/1270) * #{$new_vh});
+              }
             }
           }
 
           &.block7{
             margin-top: calc(25px/2);
+            @include mq_maxH() {
+              margin-top: calc((25/1270) * #{$new_vh});
+            }
             .ph{
               width: calc(618px/2);
+              @include mq_maxH() {
+                width: calc((618/1270) * #{$new_vh});
+              }
             }
 
             .txt-contents{
@@ -909,8 +1043,15 @@ body {
               margin-left: calc(90px/2);
               position: relative;
               z-index: 2;
+              @include mq_maxH() {
+                margin-top: calc((-23/1270) * #{$new_vh});
+                margin-left: calc((90/1270) * #{$new_vh});
+              }
               .detail{
                 width: calc(396px/2);
+                @include mq_maxH() {
+                  width: calc((396/1270) * #{$new_vh});
+                }
               }
             }
 
@@ -922,6 +1063,11 @@ body {
               margin-top: calc(837px/2);
               margin-left: calc(-23px/2);
               z-index: 1;
+              @include mq_maxH() {
+                width: calc((246/1270) * #{$new_vh});
+                margin-top: calc((837/1270) * #{$new_vh});
+                margin-left: calc((-23/1270) * #{$new_vh});
+              }
             }
             .deco-crown2{
               width: calc(301px/2);
@@ -931,13 +1077,25 @@ body {
               margin-top: calc(300px/2);
               margin-right: calc(-98px/2);
               z-index: 1;
+              @include mq_maxH() {
+                width: calc((301/1270) * #{$new_vh});
+                margin-top: calc((300/1270) * #{$new_vh});
+                margin-right: calc((-98/1270) * #{$new_vh});
+              }
             }
           }
           &.block8{
             margin-top: calc(763px/2);
             margin-left: calc(-152px/2);
+            @include mq_maxH() {
+              margin-top: calc((763/1270) * #{$new_vh});
+              margin-left: calc((-152/1270) * #{$new_vh});
+            }
             .ph{
               width: calc(658px/2);
+              @include mq_maxH() {
+                width: calc((658/1270) * #{$new_vh});
+              }
             }
 
             .txt-contents{
@@ -945,8 +1103,15 @@ body {
               margin-left: calc(-331px/2);
               position: relative;
               z-index: 2;
+              @include mq_maxH() {
+                margin-top: calc((-218/1270) * #{$new_vh});
+                margin-left: calc((-331/1270) * #{$new_vh});
+              }
               .detail{
                 width: calc(527px/2);
+                @include mq_maxH() {
+                  width: calc((527/1270) * #{$new_vh});
+                }
               }
             }
 
@@ -957,13 +1122,25 @@ body {
               width: calc(213px/2);
               margin-top: calc(189px/2);
               margin-left: calc(-600px/2);
+              @include mq_maxH() {
+                width: calc((213/1270) * #{$new_vh});
+                margin-top: calc((189/1270) * #{$new_vh});
+                margin-left: calc((-600/1270) * #{$new_vh});
+              }
             }
           }
           &.block9{
             margin-top: calc(324px/2);
             margin-left: calc(-436px/2);
+            @include mq_maxH() {
+              margin-top: calc((324/1270) * #{$new_vh});
+              margin-left: calc((-436/1270) * #{$new_vh});
+            }
             .ph{
               width: calc(551px/2);
+              @include mq_maxH() {
+                width: calc((551/1270) * #{$new_vh});
+              }
             }
 
             .txt-contents{
@@ -971,8 +1148,15 @@ body {
               margin-left: calc(332px/2);
               position: relative;
               z-index: 2;
+              @include mq_maxH() {
+                margin-top: calc((-719/1270) * #{$new_vh});
+                margin-left: calc((332/1270) * #{$new_vh});
+              }
               .detail{
                 width: calc(396px/2);
+                @include mq_maxH() {
+                  width: calc((396/1270) * #{$new_vh});
+                }
               }
             }
 
@@ -983,31 +1167,55 @@ body {
               width: calc(476px/2);
               margin-top: calc(503px/2);
               margin-right: calc(-193px/2);
+              @include mq_maxH() {
+                width: calc((476/1270) * #{$new_vh});
+                margin-top: calc((503/1270) * #{$new_vh});
+                margin-right: calc((-193/1270) * #{$new_vh});
+              }
             }
           }
 
           &.block10{
             margin-top: calc(67px/2);
             margin-left: calc(28px/2);
+            @include mq_maxH() {
+              margin-top: calc((67/1270) * #{$new_vh});
+              margin-left: calc((28/1270) * #{$new_vh});
+            }
 
             .ph1{
               width: calc(559px/2);
               margin-left: calc(110px/2);
               position: relative;
               z-index: 2;
+              @include mq_maxH() {
+                width: calc((559/1270) * #{$new_vh});
+                margin-left: calc((110/1270) * #{$new_vh});
+              }
             }
 
             .ph2{
               width: calc(352px/2);
               margin-top: calc(52px/2);
+              @include mq_maxH() {
+                width: calc((352/1270) * #{$new_vh});
+                margin-top: calc((52/1270) * #{$new_vh});
+              }
             }
 
             .txt-contents{
               margin-top: calc(-435px/2);
               margin-left: calc(295px/2);
+              @include mq_maxH() {
+                margin-top: calc((-435/1270) * #{$new_vh});
+                margin-left: calc((295/1270) * #{$new_vh});
+              }
               
               .detail{
                 width: calc(527px/2);
+                @include mq_maxH() {
+                  width: calc((527/1270) * #{$new_vh});
+                }
               }
             }
 
@@ -1019,6 +1227,11 @@ body {
               margin-top: calc(33px/2);
               margin-left: calc(-149px/2);
               z-index: 1;
+              @include mq_maxH() {
+                width: calc((365/1270) * #{$new_vh});
+                margin-top: calc((33/1270) * #{$new_vh});
+                margin-left: calc((-149/1270) * #{$new_vh});
+              }
             }
 
             .deco-illust{
@@ -1028,27 +1241,49 @@ body {
               width: calc(248px/2);
               margin-top: calc(502px/2);
               margin-right: calc(-176px/2);
+              @include mq_maxH() {
+                width: calc((248/1270) * #{$new_vh});
+                margin-top: calc((502/1270) * #{$new_vh});
+                margin-right: calc((-176/1270) * #{$new_vh});
+              }
             }
           }
 
           &.block11{
             margin-top: calc(650px/2);
             margin-left: calc(-274px/2);
+            @include mq_maxH() {
+              margin-top: calc((650/1270) * #{$new_vh});
+              margin-left: calc((-274/1270) * #{$new_vh});
+            }
 
             .ph{
               width: calc(881px/2);
+              @include mq_maxH() {
+                width: calc((881/1270) * #{$new_vh});
+              }
             }
 
             .txt-contents{
               margin-top: calc(-474px/2);
               margin-left: calc(-97px/2);
+              @include mq_maxH() {
+                margin-top: calc((-474/1270) * #{$new_vh});
+                margin-left: calc((-97/1270) * #{$new_vh});
+              }
 
               .name{
                 margin-bottom: calc(19px/2);
+                @include mq_maxH() {
+                  margin-bottom: calc((19/1270) * #{$new_vh});
+                }
               }
 
               .price{
                 margin:  0 0 calc(21px/2) 0;
+                @include mq_maxH() {
+                  margin: 0 0 calc((21/1270) * #{$new_vh}) 0;
+                }
               }
 
               .credit{
@@ -1061,6 +1296,9 @@ body {
                 width: calc(320px/2);
                 margin-left: calc(-271px/2);
                 margin-top: calc(75px/2);
+                @include mq_maxH() {
+                  width: calc((320/1270) * #{$new_vh});
+                }
               }
             }
           }
@@ -1068,48 +1306,90 @@ body {
           &.block12{
             margin-top: calc(174px/2);
             margin-left: calc(-362px/2);
+            @include mq_maxH() {
+              margin-top: calc((174/1270) * #{$new_vh});
+              margin-left: calc((-362/1270) * #{$new_vh});
+            }
             .ph{
               width: calc(296px/2);
+              @include mq_maxH() {
+                width: calc((296/1270) * #{$new_vh});
+              }
             }
 
             .txt-contents{
               margin-top: calc(-544px/2);
               margin-left: calc(-318px/2);
+              @include mq_maxH() {
+                margin-top: calc((-544/1270) * #{$new_vh});
+                margin-left: calc((-318/1270) * #{$new_vh});
+              }
 
               .detail{
                 width: calc(319px/2);
+                @include mq_maxH() {
+                  width: calc((319/1270) * #{$new_vh});
+                }
               }
             }
           }
           &.block13{
             margin-top: calc(80px/2);
             margin-left: calc(61px/2);
+            @include mq_maxH() {
+              margin-top: calc((80/1270) * #{$new_vh});
+              margin-left: calc((61/1270) * #{$new_vh});
+            }
             .ph{
               width: calc(650px/2);
+              @include mq_maxH() {
+                width: calc((650/1270) * #{$new_vh});
+              }
             }
 
             .txt-contents{
               margin-top: calc(35px/2);
               margin-left: calc(-33px/2);
+              @include mq_maxH() {
+                margin-top: calc((35/1270) * #{$new_vh});
+                margin-left: calc((-33/1270) * #{$new_vh});
+              }
 
               .detail{
                 width: calc(464px/2);
+                @include mq_maxH() {
+                  width: calc((464/1270) * #{$new_vh});
+                }
               }
             }
           }
           &.block14{
             margin-top: calc(623px/2);
             margin-left: calc(-207px/2);
+            @include mq_maxH() {
+              margin-top: calc((623/1270) * #{$new_vh});
+              margin-left: calc((-207/1270) * #{$new_vh});
+            }
             .ph{
               width: calc(485px/2);
+              @include mq_maxH() {
+                width: calc((485/1270) * #{$new_vh});
+              }
             }
 
             .txt-contents{
               margin-top: calc(-347px/2);
               margin-left: calc(-272px/2);
+              @include mq_maxH() {
+                margin-top: calc((-347/1270) * #{$new_vh});
+                margin-left: calc((-272/1270) * #{$new_vh});
+              }
 
               .detail{
                 width: calc(319px/2);
+                @include mq_maxH() {
+                  width: calc((319/1270) * #{$new_vh});
+                }
               }
             }
 
@@ -1120,21 +1400,40 @@ body {
               right: 0;
               margin-top: calc(284px/2);
               margin-right: calc(-91px/2);
+              @include mq_maxH() {
+                width: calc((54/1270) * #{$new_vh});
+                margin-top: calc((284/1270) * #{$new_vh});
+                margin-right: calc((-91/1270) * #{$new_vh});
+              }
             }
           }
           &.block15{
             margin-top: calc(91px/2);
             margin-left: calc(-71px/2);
+            @include mq_maxH() {
+              margin-top: calc((91/1270) * #{$new_vh});
+              margin-left: calc((-71/1270) * #{$new_vh});
+            }
             .ph{
               width: calc(630px/2);
+              @include mq_maxH() {
+                width: calc((630/1270) * #{$new_vh});
+              }
             }
 
             .txt-contents{
               margin-top: calc(-790px/2);
               margin-left: calc(-168px/2);
+              @include mq_maxH() {
+                margin-top: calc((-790/1270) * #{$new_vh});
+                margin-left: calc((-168/1270) * #{$new_vh});
+              }
 
               .detail{
                 width: calc(319px/2);
+                @include mq_maxH() {
+                  width: calc((319/1270) * #{$new_vh});
+                }
               }
             }
 
@@ -1145,6 +1444,11 @@ body {
               left: 0;
               margin-top: calc(434px/2);
               margin-left: calc(-132px/2);
+              @include mq_maxH() {
+                width: calc((89/1270) * #{$new_vh});
+                margin-top: calc((434/1270) * #{$new_vh});
+                margin-left: calc((-132/1270) * #{$new_vh});
+              }
             }
             .deco-kirakira2{
               width: calc(54px/2);
@@ -1153,21 +1457,40 @@ body {
               right: 0;
               margin-top: calc(510px/2);
               margin-right: calc(149px/2);
+              @include mq_maxH() {
+                width: calc((54/1270) * #{$new_vh});
+                margin-top: calc((510/1270) * #{$new_vh});
+                margin-right: calc((149/1270) * #{$new_vh});
+              }
             }
           }
           &.block16{
             margin-top: calc(309px/2);
             margin-left: calc(-174px/2);
+            @include mq_maxH() {
+              margin-top: calc((309/1270) * #{$new_vh});
+              margin-left: calc((-174/1270) * #{$new_vh});
+            }
             .ph{
               width: calc(838px/2);
+              @include mq_maxH() {
+                width: calc((838/1270) * #{$new_vh});
+              }
             }
 
             .txt-contents{
               margin-top: calc(-280px/2);
               margin-left: calc(-272px/2);
+              @include mq_maxH() {
+                margin-top: calc((-280/1270) * #{$new_vh});
+                margin-left: calc((-272/1270) * #{$new_vh});
+              }
 
               .detail{
                 width: calc(467px/2);
+                @include mq_maxH() {
+                  width: calc((467/1270) * #{$new_vh});
+                }
               }
             }
 
@@ -1178,6 +1501,12 @@ body {
               left: 0;
               margin-top: calc(-205px/2);
               margin-left: calc(302px/2);
+              @include mq_maxH() {
+                width: calc((125/1270) * #{$new_vh});
+                margin-top: calc((-205/1270) * #{$new_vh});
+                margin-left: calc((302/1270) * #{$new_vh});
+                
+              }
             }
             .deco-illust{
               width: calc(202px/2);
@@ -1186,22 +1515,42 @@ body {
               right: 0;
               margin-top: calc(-265px/2);
               margin-right: calc(124px/2);
+              @include mq_maxH() {
+                width: calc((202/1270) * #{$new_vh});
+                margin-top: calc((-265/1270) * #{$new_vh});
+                margin-right: calc((124/1270) * #{$new_vh});
+                
+              }
             }
           }
           &.block17{
             margin-top: calc(70px/2);
             margin-left: calc(14px/2);
+            @include mq_maxH() {
+              margin-top: calc((70/1270) * #{$new_vh});
+              margin-left: calc((14/1270) * #{$new_vh});
+            }
             .ph{
               width: calc(759px/2);
+              @include mq_maxH() {
+                width: calc((759/1270) * #{$new_vh});
+              }
             }
 
             .txt-contents{
               margin-top: calc(61px/2);
               margin-left: calc(120px/2);
               color: #fff;
+              @include mq_maxH() {
+                margin-top: calc((61/1270) * #{$new_vh});
+                margin-left: calc((120/1270) * #{$new_vh});
+              }
 
               .detail{
                 width: calc(467px/2);
+                @include mq_maxH() {
+                  width: calc((467/1270) * #{$new_vh});
+                }
               }
             }
 
@@ -1212,6 +1561,11 @@ body {
               right: 0;
               margin-top: calc(754px/2);
               margin-right: calc(174px/2);
+              @include mq_maxH() {
+                width: calc((125/1270) * #{$new_vh});
+                margin-top: calc((754/1270) * #{$new_vh});
+                margin-right: calc((174/1270) * #{$new_vh});
+              }
             }
             .deco-kirakira2{
               width: calc(89px/2);
@@ -1220,6 +1574,11 @@ body {
               right: 0;
               margin-top: calc(-26px/2);
               margin-right: calc(554px/2);
+              @include mq_maxH() {
+                width: calc((89/1270) * #{$new_vh});
+                margin-top: calc((-26/1270) * #{$new_vh});
+                margin-right: calc((554/1270) * #{$new_vh});
+              }
             }
             .deco-kirakira3{
               width: calc(89px/2);
@@ -1228,6 +1587,11 @@ body {
               left: 0;
               margin-top: calc(271px/2);
               margin-left: calc(-105px/2);
+              @include mq_maxH() {
+                width: calc((89/1270) * #{$new_vh});
+                margin-top: calc((271/1270) * #{$new_vh});
+                margin-left: calc((-105/1270) * #{$new_vh});
+              }
             }
             .deco-illust{
               width: calc(336px/2);
@@ -1236,23 +1600,41 @@ body {
               right: 0;
               margin-top: calc(65px/2);
               margin-right: calc(-321px/2);
+              @include mq_maxH() {
+                width: calc((336/1270) * #{$new_vh});
+                margin-top: calc((65/1270) * #{$new_vh});
+                margin-right: calc((-321/1270) * #{$new_vh});
+              }
             }
           }
           &.block18{
             margin-top: calc(705px/2);
             margin-left: calc(38px/2);
+            @include mq_maxH() {
+              margin-top: calc((705/1270) * #{$new_vh});
+              margin-left: calc((38/1270) * #{$new_vh});
+            }
             .ph{
               width: calc(662px/2);
               position: relative;
               z-index: 4;
+              @include mq_maxH() {
+                width: calc((662/1270) * #{$new_vh});
+              }
             }
 
             .txt-contents{
               margin-top: calc(-848px/2);
               color: #fff;
+              @include mq_maxH() {
+                margin-top: calc((-848/1270) * #{$new_vh});
+              }
 
               .detail{
                 width: calc(467px/2);
+                @include mq_maxH() {
+                  width: calc((467/1270) * #{$new_vh});
+                }
               }
             }
 
@@ -1263,6 +1645,11 @@ body {
               left: 0;
               margin-top: calc(390px/2);
               margin-left: calc(-80px/2);
+              @include mq_maxH() {
+                width: calc((54/1270) * #{$new_vh});
+                margin-top: calc((390/1270) * #{$new_vh});
+                margin-left: calc((-80/1270) * #{$new_vh});
+              }
             }
             .deco-kirakira2{
               width: calc(89px/2);
@@ -1270,6 +1657,10 @@ body {
               top: 0;
               right: 0;
               margin-right: calc(91px/2);
+              @include mq_maxH() {
+                width: calc((89/1270) * #{$new_vh});
+                margin-right: calc((91/1270) * #{$new_vh});
+              }
             }
             .deco-kirakira3{
               width: calc(89px/2);
@@ -1278,6 +1669,11 @@ body {
               left: 0;
               margin-top: calc(271px/2);
               margin-left: calc(-105px/2);
+              @include mq_maxH() {
+                width: calc((89/1270) * #{$new_vh});
+                margin-top: calc((271/1270) * #{$new_vh});
+                margin-left: calc((-105/1270) * #{$new_vh});
+              }
             }
             .deco-illust1{
               width: calc(325px/2);
@@ -1287,6 +1683,11 @@ body {
               margin-top: calc(71px/2);
               margin-right: calc(-356px/2);
               z-index: 3;
+              @include mq_maxH() {
+                width: calc((325/1270) * #{$new_vh});
+                margin-top: calc((71/1270) * #{$new_vh});
+                margin-right: calc((-356/1270) * #{$new_vh});
+              }
             }
             .deco-illust2{
               width: calc(273px/2);
@@ -1296,6 +1697,11 @@ body {
               margin-top: calc(126px/2);
               margin-right: calc(-678px/2);
               z-index: 3;
+              @include mq_maxH() {
+                width: calc((273/1270) * #{$new_vh});
+                margin-top: calc((126/1270) * #{$new_vh});
+                margin-right: calc((-678/1270) * #{$new_vh});
+              }
             }
             .deco-illust3{
               width: calc(1152px/2);
@@ -1305,24 +1711,43 @@ body {
               margin-top: calc(286px/2);
               margin-right: calc(-917px/2);
               z-index: 2;
+              @include mq_maxH() {
+                width: calc((1152/1270) * #{$new_vh});
+                margin-top: calc((286/1270) * #{$new_vh});
+                margin-right: calc((-917/1270) * #{$new_vh});
+              }
             }
           }
           &.block19{
             margin-top: calc(246px/2);
             margin-right: calc(39px/2);
+            @include mq_maxH() {
+              margin-top: calc((246/1270) * #{$new_vh});
+              margin-right: calc((39/1270) * #{$new_vh});
+            }
             .ph{
               width: calc(430px/2);
               position: relative;
               z-index: 4;
+              @include mq_maxH() {
+                width: calc((430/1270) * #{$new_vh});
+              }
             }
 
             .txt-contents{
               margin-top: calc(-690px/2);
               margin-left: calc(-317px/2);
               color: #fff;
+              @include mq_maxH() {
+                margin-top: calc((-690/1270) * #{$new_vh});
+                margin-left: calc((-317/1270) * #{$new_vh});
+              }
 
               .detail{
                 width: calc(467px/2);
+                @include mq_maxH() {
+                  width: calc((467/1270) * #{$new_vh});
+                }
               }
             }
 
@@ -1333,6 +1758,11 @@ body {
               right: 0;
               margin-top: calc(-138px/2);
               margin-right: calc(-35px/2);
+              @include mq_maxH() {
+                width: calc((89/1270) * #{$new_vh});
+                margin-top: calc((-138/1270) * #{$new_vh});
+                margin-right: calc((-35/1270) * #{$new_vh});
+              }
             }
             .deco-kirakira2{
               width: calc(54px/2);
@@ -1341,6 +1771,11 @@ body {
               right: 0;
               margin-top: calc(441px/2);
               margin-right: calc(-107px/2);
+              @include mq_maxH() {
+                width: calc((54/1270) * #{$new_vh});
+                margin-top: calc((441/1270) * #{$new_vh});
+                margin-right: calc((-107/1270) * #{$new_vh});
+              }
              
             }
             
@@ -1348,19 +1783,33 @@ body {
           &.block20{
             margin-top: calc(63px/2);
             margin-left: calc(101px/2);
+            @include mq_maxH() {
+              margin-top: calc((63/1270) * #{$new_vh});
+              margin-left: calc((101/1270) * #{$new_vh});
+            }
             .ph{
               width: calc(773px/2);
               position: relative;
               z-index: 4;
+              @include mq_maxH() {
+                width: calc((773/1270) * #{$new_vh});
+              }
             }
 
             .txt-contents{
               margin-top: calc(41px/2);
               margin-left: calc(457px/2);
               color: #fff;
+              @include mq_maxH() {
+                margin-top: calc((41/1270) * #{$new_vh});
+                margin-left: calc((457/1270) * #{$new_vh});
+              }
 
               .detail{
                 width: calc(467px/2);
+                @include mq_maxH() {
+                  width: calc((467/1270) * #{$new_vh});
+                }
               }
             }
 
@@ -1371,6 +1820,11 @@ body {
               right: 0;
               margin-top: calc(792px/2);
               margin-right: calc(65px/2);
+              @include mq_maxH() {
+                width: calc((125/1270) * #{$new_vh});
+                margin-top: calc((792/1270) * #{$new_vh});
+                margin-right: calc((65/1270) * #{$new_vh});
+              }
             }
             .deco-kirakira2{
               width: calc(54px/2);
@@ -1379,7 +1833,11 @@ body {
               right: 0;
               margin-top: calc(441px/2);
               margin-right: calc(-80px/2);
-             
+              @include mq_maxH() {
+                width: calc((54/1270) * #{$new_vh});
+                margin-top: calc((441/1270) * #{$new_vh});
+                margin-right: calc((-80/1270) * #{$new_vh});
+              }
             }
 
             .deco-illust1{
@@ -1390,6 +1848,11 @@ body {
               margin-top: calc(49px/2);
               margin-right: calc(120px/2);
               z-index: 3;
+              @include mq_maxH() {
+                width: calc((297/1270) * #{$new_vh});
+                margin-top: calc((49/1270) * #{$new_vh});
+                margin-right: calc((120/1270) * #{$new_vh});
+              }
             }
             .deco-illust2{
               width: calc(314px/2);
@@ -1399,16 +1862,28 @@ body {
               margin-top: calc(445px/2);
               margin-right: calc(-194px/2);
               z-index: 3;
+              @include mq_maxH() {
+                width: calc((314/1270) * #{$new_vh});
+                margin-top: calc((445/1270) * #{$new_vh});
+                margin-right: calc((-194/1270) * #{$new_vh});
+              }
             }
             
           }
           &.block21{
             margin-top: calc(243px/2);
             margin-left: calc(218px/2);
+            @include mq_maxH() {
+              margin-top: calc((243/1270) * #{$new_vh});
+              margin-left: calc((218/1270) * #{$new_vh});
+            }
             .ph1{
               width: calc(903px/2);
               position: relative;
               z-index: 4;
+              @include mq_maxH() {
+                width: calc((903/1270) * #{$new_vh});
+              }
             }
             .ph2{
               width: calc(543px/2);
@@ -1416,15 +1891,27 @@ body {
               z-index: 4;
               margin-top: -98.5px;
               margin-left: -70px;
+              @include mq_maxH() {
+                width: calc((543/1270) * #{$new_vh});
+                margin-top: calc((-197/1270) * #{$new_vh});
+                margin-left: calc((-140/1270) * #{$new_vh});
+              }
             }
 
             .txt-contents{
               margin-top: calc(-1149px/2);
               margin-left: calc(-229px/2);
               color: #fff;
+              @include mq_maxH() {
+                margin-top: calc((-1149/1270) * #{$new_vh});
+                margin-left: calc((-229/1270) * #{$new_vh});
+              }
 
               .detail{
                 width: calc(344px/2);
+                @include mq_maxH() {
+                  width: calc((344/1270) * #{$new_vh});
+                }
               }
 
               .name{
@@ -1439,6 +1926,11 @@ body {
               left: 0;
               margin-top: calc(531px/2);
               margin-left: calc(-38px/2);
+              @include mq_maxH() {
+                width: calc((54/1270) * #{$new_vh});
+                margin-top: calc((531/1270) * #{$new_vh});
+                margin-left: calc((-38/1270) * #{$new_vh});
+              }
             }
             .deco-kirakira2{
               width: calc(54px/2);
@@ -1447,7 +1939,11 @@ body {
               left: 0;
               margin-top: calc(271px/2);
               margin-left: calc(-80px/2);
-             
+              @include mq_maxH() {
+                width: calc((54/1270) * #{$new_vh});
+                margin-top: calc((271/1270) * #{$new_vh});
+                margin-left: calc((-80/1270) * #{$new_vh});
+              }
             }
             .deco-kirakira3{
               width: calc(89px/2);
@@ -1456,7 +1952,11 @@ body {
               left: 0;
               margin-top: calc(869px/2);
               margin-left: calc(441px/2);
-             
+              @include mq_maxH() {
+                width: calc((89/1270) * #{$new_vh});
+                margin-top: calc((869/1270) * #{$new_vh});
+                margin-left: calc((441/1270) * #{$new_vh});
+              }
             }
             .deco-kirakira4{
               width: calc(89px/2);
@@ -1465,7 +1965,11 @@ body {
               left: 0;
               margin-top: calc(-146px/2);
               margin-left: calc(532px/2);
-             
+              @include mq_maxH() {
+                width: calc((89/1270) * #{$new_vh});
+                margin-top: calc((-146/1270) * #{$new_vh});
+                margin-left: calc((532/1270) * #{$new_vh});
+              }
             }
             .deco-kirakira5{
               width: calc(89px/2);
@@ -1474,7 +1978,11 @@ body {
               left: 0;
               margin-top: calc(770px/2);
               margin-left: calc(750px/2);
-             
+              @include mq_maxH() {
+                width: calc((89/1270) * #{$new_vh});
+                margin-top: calc((770/1270) * #{$new_vh});
+                margin-left: calc((750/1270) * #{$new_vh});
+              }
             }
 
             .deco-yajirushi{
@@ -1485,6 +1993,11 @@ body {
               margin-top: calc(507px/2);
               margin-left: calc(47px/2);
               z-index: 3;
+              @include mq_maxH() {
+                width: calc((57/1270) * #{$new_vh});
+                margin-top: calc((507/1270) * #{$new_vh});
+                margin-left: calc((47/1270) * #{$new_vh});
+              }
             }
             
           }
@@ -1492,19 +2005,33 @@ body {
           &.block22{
             margin-top: calc(312px/2);
             margin-left: calc(134px/2);
+            @include mq_maxH() {
+              margin-top: calc((312/1270) * #{$new_vh});
+              margin-left: calc((134/1270) * #{$new_vh});
+            }
             .ph{
               width: calc(845px/2);
               position: relative;
               z-index: 4;
+              @include mq_maxH() {
+                width: calc((845/1270) * #{$new_vh});
+              }
             }
 
             .txt-contents{
               margin-top: calc(-305px/2);
               margin-left: calc(-104px/2);
               color: #fff;
+              @include mq_maxH() {
+                margin-top: calc((-305/1270) * #{$new_vh});
+                margin-left: calc((-104/1270) * #{$new_vh});
+              }
 
               .detail{
                 width: calc(344px/2);
+                @include mq_maxH() {
+                  width: calc((344/1270) * #{$new_vh});
+                }
               }
             }
 
@@ -1515,6 +2042,11 @@ body {
               right: 0;
               margin-top: calc(-251px/2);
               margin-right: calc(66px/2);
+              @include mq_maxH() {
+                width: calc((89/1270) * #{$new_vh});
+                margin-top: calc((-251/1270) * #{$new_vh});
+                margin-right: calc((66/1270) * #{$new_vh});
+              }
             }
             .deco-kirakira2{
               width: calc(54px/2);
@@ -1523,7 +2055,11 @@ body {
               left: 0;
               margin-top: calc(412px/2);
               margin-left: calc(-89px/2);
-             
+              @include mq_maxH() {
+                width: calc((54/1270) * #{$new_vh});
+                margin-top: calc((412/1270) * #{$new_vh});
+                margin-left: calc((-89/1270) * #{$new_vh});
+              }
             }
 
             .deco-illust1{
@@ -1534,6 +2070,11 @@ body {
               margin-top: calc(-312px/2);
               margin-left: calc(-279px/2);
               z-index: 3;
+              @include mq_maxH() {
+                width: calc((583/1270) * #{$new_vh});
+                margin-top: calc((-312/1270) * #{$new_vh});
+                margin-left: calc((-279/1270) * #{$new_vh});
+              }
             }
             .deco-illust2{
               width: calc(287px/2);
@@ -1543,6 +2084,11 @@ body {
               margin-top: calc(-266px/2);
               margin-right: calc(220px/2);
               z-index: 4;
+              @include mq_maxH() {
+                width: calc((287/1270) * #{$new_vh});
+                margin-top: calc((-266/1270) * #{$new_vh});
+                margin-right: calc((220/1270) * #{$new_vh});
+              }
             }
             
           }
@@ -1559,6 +2105,9 @@ body {
         flex-direction: column;
         align-items: center;
         margin-left: 35.5px;
+        @include mq_maxH() {
+          min-width: calc((750/1270) * #{$new_vh});
+        }
 
        
         .info-heading{
@@ -1566,6 +2115,10 @@ body {
           font-size: 10px;
           color: #fff;
           margin-top:calc(63px/2);
+          @include mq_maxH() {
+            font-size: calc((20/1270) * #{$new_vh});
+            margin-top: calc((63/1270) * #{$new_vh});
+          }
         }
         
         .info-ttl{
@@ -1576,12 +2129,21 @@ body {
           margin-top: calc(27px/2);
           margin-bottom: calc(52px/2);
           line-height: calc(48/36);
+          @include mq_maxH() {
+            font-size: calc((36/1270) * #{$new_vh});
+            margin-top: calc((27/1270) * #{$new_vh});
+            margin-bottom: calc((52/1270) * #{$new_vh});
+          }
         }
 
         .phone-illust{
           width: calc(269px/2);
           position: relative;
           margin-bottom: calc(50px/2);
+          @include mq_maxH() {
+            width: calc((269/1270) * #{$new_vh});
+            margin-bottom: calc((50/1270) * #{$new_vh});
+          }
         }
 
         .deco-illust1{
@@ -1589,18 +2151,33 @@ body {
           top: calc(328px/2);
           left: calc(-56px/2);
           width: calc(186px/2);
+          @include mq_maxH() {
+            width: calc((186/1270) * #{$new_vh});
+            top: calc((328/1270) * #{$new_vh});
+            left: calc((-56/1270) * #{$new_vh});
+          }
         }
         .deco-illust2{
           width: calc(156px/2);
           position: absolute;
           top: calc(333px/2);
           right: calc(-36px/2);
+          @include mq_maxH() {
+            width: calc((156/1270) * #{$new_vh});
+            top: calc((333/1270) * #{$new_vh});
+            right: calc((-36/1270) * #{$new_vh});
+          }
         }
         .deco-illust3{
           width: calc(224px/2);
           position: absolute;
           top: calc(75px/2);
           left: calc(25px/2);
+          @include mq_maxH() {
+            width: calc((224/1270) * #{$new_vh});
+            top: calc((75/1270) * #{$new_vh});
+            left: calc((25/1270) * #{$new_vh});
+          }
         }
 
         .deco-kirakira1{
@@ -1610,6 +2187,11 @@ body {
           width: calc(125px/2);
           margin-top: calc(241px/2);
           margin-left: calc(-256px/2);
+          @include mq_maxH() {
+            width: calc((125/1270) * #{$new_vh});
+            margin-top: calc((241/1270) * #{$new_vh});
+            margin-left: calc((-256/1270) * #{$new_vh});
+          }
         }
 
         .deco-kirakira2{
@@ -1619,6 +2201,11 @@ body {
           width: calc(89px/2);
           margin-top: calc(4px/2);
           margin-right: calc(-193px/2);
+          @include mq_maxH() {
+            width: calc((89/1270) * #{$new_vh});
+            margin-top: calc((4/1270) * #{$new_vh});
+            margin-right: calc((-193/1270) * #{$new_vh});
+          }
         }
         .deco-kirakira3{
           position: absolute;
@@ -1627,6 +2214,11 @@ body {
           width: calc(89px/2);
           margin-top: calc(439px/2);
           margin-right: calc(-188px/2);
+          @include mq_maxH() {
+            width: calc((89/1270) * #{$new_vh});
+            margin-top: calc((439/1270) * #{$new_vh});
+            margin-right: calc((-188/1270) * #{$new_vh});
+          }
         }
 
         .insta-btn{
@@ -1641,18 +2233,31 @@ body {
           @include DNPShueiMinPr6N_B();
           font-size: 14px;
           margin-bottom: calc(31px/2);
+          @include mq_maxH() {
+            width: calc((563/1270) * #{$new_vh});
+            margin-bottom: calc((31/1270) * #{$new_vh});
+            font-size: calc((28/1270) * #{$new_vh});
+            padding: calc((39/1270) * #{$new_vh}) 0;
+            border-radius: calc((56/1270) * #{$new_vh});
+          }
 
 
           .insta-icon{
             width: calc(47px/2);
             display: block;
-            margin-right: calc(25px/2)
+            margin-right: calc(25px/2);
+            @include mq_maxH() {
+              width: calc((47/1270) * #{$new_vh});
+              margin-right: calc((25/1270) * #{$new_vh});
+            }
           }
 
           .insta-txt{
             font-size: 14px;
             font-feature-settings: "palt";
-
+            @include mq_maxH() {
+              font-size: calc((28/1270) * #{$new_vh});
+            }
           }
         }
 
@@ -1667,6 +2272,13 @@ body {
           padding: calc(39px/2) 0;
           @include DNPShueiMinPr6N_B();
           font-size: 14px;
+
+          @include mq_maxH() {
+            width: calc((563/1270) * #{$new_vh});
+            padding: calc((39/1270) * #{$new_vh}) 0;
+            border-radius: calc((56/1270) * #{$new_vh});
+            font-size: calc((28/1270) * #{$new_vh}) 0;
+          }
         }
 
 
@@ -1675,6 +2287,9 @@ body {
       .footer{
         min-width: calc(750px/2);
         color: #fff;
+        @include mq_maxH() {
+          min-width: calc((750/1270) * #{$new_vh});
+        }
 
         .footer-main-img{
           width: 100%;
@@ -1685,6 +2300,11 @@ body {
             position: absolute;
             top: calc(44px/2);
             left: calc(38px/2);
+            @include mq_maxH() {
+              width: calc((67/1270) * #{$new_vh});
+              top: calc((44/1270) * #{$new_vh});
+              left: calc((38/1270) * #{$new_vh});
+            }
           }
         }
 
@@ -1695,6 +2315,11 @@ body {
           line-height: calc(46/28);
           margin-top: calc(31px/2);
           margin-bottom: calc(18px/2);
+          @include mq_maxH() {
+            margin-top: calc((31/1270) * #{$new_vh});
+            margin-bottom: calc((18/1270) * #{$new_vh});
+            font-size: calc((28/1270) * #{$new_vh});
+          }
         }
 
         .footer-page2-btn{
@@ -1706,6 +2331,10 @@ body {
           width: fit-content;
           position: relative;
           margin-bottom: calc(95px/2);
+          @include mq_maxH() {
+            margin-bottom: calc((95/1270) * #{$new_vh});
+            font-size: calc((28/1270) * #{$new_vh});
+          }
 
           &::before{
             content: '';
@@ -1717,13 +2346,24 @@ body {
             transform: translateX(-50%);
             background: #fff;
             height: 1px;
+            @include mq_maxH() {
+              height: calc((2/1270) * #{$new_vh});
+              bottom: calc((-8/1270) * #{$new_vh});
+              width: calc((112/1270) * #{$new_vh});
+            }
           }
 
           .kakko1{
             margin-right: 12px;
+            @include mq_maxH() {
+              margin-right: calc((24/1270) * #{$new_vh});
+            }
           }
           .kakko2{
             margin-left: 12px;
+            @include mq_maxH() {
+              margin-left: calc((24/1270) * #{$new_vh});
+            }
           }
         }
 
@@ -1733,6 +2373,10 @@ body {
           line-height: calc(38/22);
           font-feature-settings: "palt";
           margin-bottom: 20px;
+          @include mq_maxH() {
+            margin-bottom: calc((40/1270) * #{$new_vh});
+            font-size: calc((22/1270) * #{$new_vh});
+          }
         }
 
         .copyright{
@@ -1740,6 +2384,10 @@ body {
           @include DNPShueiMinPr6N_L();
           font-size: 11px;
           margin-left: calc(342px/2);
+          @include mq_maxH() {
+            font-size: calc((22/1270) * #{$new_vh});
+            margin-left: calc((342/1270) * #{$new_vh});
+          }
         }
       }
       
