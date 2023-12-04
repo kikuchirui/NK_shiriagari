@@ -111,7 +111,7 @@ img {
 .scroll-in.show {
 	opacity: 1;
 	transition: .5s ease;
-	transform: none!important;
+	// transform: none!important;
 }
 body, html {
 	width: 100%;
@@ -2067,6 +2067,15 @@ body {
               margin-top: calc(71px/2);
               margin-right: calc(-356px/2);
               z-index: 3;
+              transform:translateX(-15px);
+              transition:all 1s ease .3s;
+              opacity: 0;
+
+              &.show{
+                transform: translateX(0);
+                opacity: 1;
+              }
+
               @include mq_maxH() {
                 width: calc((325/1270) * #{$new_vh});
                 margin-top: calc((71/1270) * #{$new_vh});
@@ -2081,11 +2090,20 @@ body {
               margin-top: calc(126px/2);
               margin-right: calc(-678px/2);
               z-index: 3;
+              transform:translateX(15px);
+              transition:all 1s ease .3s;
+              opacity: 0;
+
+              &.show{
+                transform: translateX(0);
+                opacity: 1;
+              }
               @include mq_maxH() {
                 width: calc((273/1270) * #{$new_vh});
                 margin-top: calc((126/1270) * #{$new_vh});
                 margin-right: calc((-678/1270) * #{$new_vh});
               }
+
             }
             .deco-illust3{
               width: calc(1152px/2);
@@ -2237,12 +2255,36 @@ body {
               right: 0;
               margin-top: calc(49px/2);
               margin-right: calc(120px/2);
-              z-index: 3;
+              z-index: 5;
+              animation: fuyuX 1.6s ease-in-out infinite alternate;
+
+              img{
+                animation: fuyuY 1s ease-in-out infinite alternate;
+              }
+    
               @include mq_maxH() {
                 width: calc((297/1270) * #{$new_vh});
                 margin-top: calc((49/1270) * #{$new_vh});
                 margin-right: calc((120/1270) * #{$new_vh});
               }
+
+              @keyframes fuyuX {
+                0%{
+                  transform: translateX(4%);
+                }
+               100%{
+                transform: translateX(-4%);
+               }
+              }
+              @keyframes fuyuY {
+                0%{
+                  transform: translateY(5%);
+                }
+               100%{
+                transform: translateX(0%);
+               }
+              }
+            
             }
             .deco-illust2{
               width: calc(314px/2);
@@ -2498,10 +2540,33 @@ body {
               margin-top: calc(-266px/2);
               margin-right: calc(220px/2);
               z-index: 4;
+              animation:steps 2s ease-in-out infinite;
+              img{
+                
+              }
+              
               @include mq_maxH() {
                 width: calc((287/1270) * #{$new_vh});
                 margin-top: calc((-266/1270) * #{$new_vh});
                 margin-right: calc((220/1270) * #{$new_vh});
+              }
+
+              @keyframes steps{
+                0% {
+                  transform: translate(0,0);
+                }
+                25% {
+                    transform: translate(-3px,-6px) rotate(-2deg);
+                }
+                50% {
+                    transform: translate(0,0);
+                }
+                75% {
+                    transform: translate(3px,-6px) rotate(2deg);
+                }
+                100% {
+                    transform: translate(0,0);
+                }
               }
             }
             
@@ -2565,6 +2630,11 @@ body {
           top: calc(328px/2);
           left: calc(-56px/2);
           width: calc(186px/2);
+          transform: translateX(-6px);
+          transition: 1s ease .4s;
+          &.show{
+            transform: translateX(0px);
+          }
           @include mq_maxH() {
             width: calc((186/1270) * #{$new_vh});
             top: calc((328/1270) * #{$new_vh});
@@ -2576,6 +2646,11 @@ body {
           position: absolute;
           top: calc(333px/2);
           right: calc(-36px/2);
+          transform: translateX(6px);
+          transition: 1s ease .4s;
+          &.show{
+            transform: translateX(0px);
+          }
           @include mq_maxH() {
             width: calc((156/1270) * #{$new_vh});
             top: calc((333/1270) * #{$new_vh});
@@ -2587,6 +2662,12 @@ body {
           position: absolute;
           top: calc(75px/2);
           left: calc(25px/2);
+          opacity: 0;
+          transition:all 1s ease .2s;
+
+          &.show{
+            opacity: 1;
+          }
           @include mq_maxH() {
             width: calc((224/1270) * #{$new_vh});
             top: calc((75/1270) * #{$new_vh});
