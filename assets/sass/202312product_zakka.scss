@@ -335,9 +335,7 @@ body {
       justify-content: flex-start;
       align-items: flex-start;
       width: fit-content;
-      // background: $bg_color;
       background: linear-gradient(90deg, $bg_color, #343c55);
-      // box-shadow: 1px 1px 20px 7px rgba(0,0,0,.11);
       transition: box-shadow 0.5s ease 3s;
       @include mq_maxH() {
         height: 100%;
@@ -351,10 +349,6 @@ body {
         flex-direction: column;
         align-items: center;
         @include mq_maxH() {
-          // width: (750/1270) * #{$new_vh});
-          // width: calc((750 / 1270) * #{$new_vh});
-          // width: 100vw;
-          // max-width: (750px/2);
           width: auto;
         }
 
