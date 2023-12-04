@@ -1,15 +1,16 @@
 $(function () {
 	var breakPoint = 768,
 		isSp = !1,
-        $win = $(window),
-        winH = $win.height(),
-        winW = $win.width(),
-        current_pos = $win.scrollTop(),
-        $body = $('body'),
+		$win = $(window),
+		winH = $win.height(),
+		winW = $win.width(),
+		current_pos = $win.scrollTop(),
+		current_btm = $win.scrollTop() + winH,
+		$body = $('body'),
 		$scrollContents = $('.scroll-contents'),
-		$scrollInner    = $('.scroll-inner'),
-		$container      = $('.g-container') 
-	;
+		$scrollInner = $('.scroll-inner'),
+		$container = $('.g-container')
+		;
 
 	// 1.関数の定義
 	function setHeight() {
@@ -27,50 +28,50 @@ $(function () {
 	$win.on({
 		load: function () {
 			winH = $win.height();
-        	winW = $win.width();
-        	current_pos = $win.scrollTop();
+			winW = $win.width();
+			current_pos = $win.scrollTop();
 
 			$scrollContents.addClass("scrollable");
 			$scrollInner.addClass("show");
 			$body.removeClass('noscroll');
 			if (!isSp) {
 				$container.addClass("scrollable-vertical");
-			}					
-				
+			}
+
 			verticalScrollFunctions();
-		
+
 			if (isSp) {
 				$scrollContents.on("scroll", function () {
 					verticalScrollFunctions();
 				});
 			} else {
-				$scrollContents.on("scroll", function() {
+				$scrollContents.on("scroll", function () {
 					verticalScrollSync();
 					verticalScrollFunctions();
 				});
 			}
-		
+
 			scrollFunction();
 			modalToggle();
 		},
 		scroll: function () {
 			winH = $win.height();
-        	winW = $win.width();
-        	current_pos = $win.scrollTop();
+			winW = $win.width();
+			current_pos = $win.scrollTop();
 
 			scrollFunction();
 		},
 		resize: function () {
-        	winW = $win.width();
+			winW = $win.width();
 		}
 	});
 
-	$(".main-visual").click(function() {
+	$(".main-visual").click(function () {
 		if (winW <= 768) {
-		  var scrollTarget = $(".main-lead").offset().left - 40 - $scrollContents.offset().left;
-		  $scrollContents.animate({ scrollLeft: scrollTarget }, "slow");
+			var scrollTarget = $(".main-lead").offset().left - 40 - $scrollContents.offset().left;
+			$scrollContents.animate({ scrollLeft: scrollTarget }, "slow");
 		}
-	});	  
+	});
 
 	//pcの場合呼び出される
 	function scrollFunction() {
@@ -80,24 +81,24 @@ $(function () {
 	//水平
 	function horizontalScrollSync() {
 		var containerHeight = $container.height();
-		
-		var scrollLeftPosition = current_pos / (containerHeight - winH) * ( $scrollInner.width() + 20 - $scrollContents.width());
-		
+
+		var scrollLeftPosition = current_pos / (containerHeight - winH) * ($scrollInner.width() + 20 - $scrollContents.width());
+
 		//差が15以上ある場合にのみ設定されるため、頻繁なスクロールイベントを処理することを避けることができます。
 		if (Math.abs($scrollContents.scrollLeft() - scrollLeftPosition) > 15) {
-		  $scrollContents.scrollLeft(scrollLeftPosition);
+			$scrollContents.scrollLeft(scrollLeftPosition);
 		}
 	}
 
 	//垂直
 	function verticalScrollSync() {
 		var scrollContentsLeftPos = $scrollContents.scrollLeft();
-		
+
 		var scrollTopPosition = scrollContentsLeftPos / ($scrollInner.width() + 20 - winW) * ($container.height() - winH);
 
 		//差が15以上ある場合にのみ設定されるため、頻繁なスクロールイベントを処理することを避けることができます。
 		if (Math.abs($win.scrollTop() - scrollTopPosition) > 15) {
-		  $win.scrollTop(scrollTopPosition);
+			$win.scrollTop(scrollTopPosition);
 		}
 	}
 
@@ -105,32 +106,47 @@ $(function () {
 	function verticalScrollFunctions() {
 		var scrollContentsW = $scrollContents.width();
 		var scrollContentsPos = $scrollContents.scrollTop();
-	  
-		$(".scroll-in").each(function() {
-		  if ($(this).offset().left < scrollContentsPos + (5 * scrollContentsW) / 6) {
-			$(this).addClass("show");
-		  }
+
+		$(".scroll-in").each(function () {
+			if ($(this).offset().left < scrollContentsPos + (5 * scrollContentsW) / 6) {
+				$(this).addClass("show");
+			}
 		});
-	  
+
 	}
 
-	function modalToggle(){
+	function modalToggle() {
 		var $modal = $('.modal-wrapper');
 
-		$('.modal-link').click(function(){
+		$('.modal-link').click(function () {
 			$modal.addClass('show');
 		});
-		$modal.click(function(e) {
-			if(!$(e.target).closest('.modal').length) {
+		$modal.click(function (e) {
+			if (!$(e.target).closest('.modal').length) {
 				$modal.removeClass('show');
-			} 
+			}
 		})
-		$('.close-btn').click(function(){
+		$('.close-btn').click(function () {
 			$modal.removeClass('show');
 		});
 	}
 
+	var $parallax = $('.item-block');
+	if ($parallax.length) {
+		parallax();
+		$scrollContents.on('load resize scroll', parallax);
+	}
+	function parallax() {
+		$parallax.each(function () {
+			var $this = $(this);
+			$this.css('transform', '');
 
-	
-  
+			var parallax_pos = $this.offset().top;
+
+			$this.css('transform', 'translateX(' + (current_btm - parallax_pos - (winH / 1.75)) * 0.1 + 'px)');
+
+		});
+	}
+
+
 });
