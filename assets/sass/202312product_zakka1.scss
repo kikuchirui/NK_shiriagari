@@ -145,7 +145,12 @@ body {
       opacity: 1;
       visibility: visible;
       transition: 1s ease;
+
+      &::-webkit-scrollbar{
+        display: none;
+      }
     }
+   
     .scroll-inner {
       &.show {
         opacity: 1;
