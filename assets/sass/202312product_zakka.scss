@@ -1462,6 +1462,11 @@ body {
               margin-top: calc(-263px/2);
               margin-left: calc(-72px/2);
               width: calc(673px/2);
+              @include mq_maxH() {
+                width: calc((673/1270) * #{$new_vh});
+                margin-top: calc((-263/1270) * #{$new_vh});
+                margin-left: calc((-72/1270) * #{$new_vh});
+              }
             }
 
 
@@ -1647,6 +1652,8 @@ body {
                 margin-top: calc(75px/2);
                 @include mq_maxH() {
                   width: calc((320/1270) * #{$new_vh});
+                  margin-left: calc((-271/1270) * #{$new_vh});
+                  margin-top: calc((75/1270) * #{$new_vh});
                 }
               }
             }
@@ -2786,7 +2793,7 @@ body {
             width: calc((563/1270) * #{$new_vh});
             padding: calc((45/1270) * #{$new_vh}) 0;
             border-radius: calc((56/1270) * #{$new_vh});
-            font-size: calc((28/1270) * #{$new_vh}) 0;
+            font-size: calc((28/1270) * #{$new_vh});
           }
 
           @include mq{
