@@ -131,19 +131,24 @@ $(function () {
 		});
 	}
 
-	var $parallax = $('.item-block');
+	var $parallax = $('.item-parallax');
 	if ($parallax.length) {
 		parallax();
-		$scrollContents.on('load resize scroll', parallax);
+		$scrollContents.on('scroll', parallax);
 	}
 	function parallax() {
 		$parallax.each(function () {
 			var $this = $(this);
-			$this.css('transform', '');
+			var parallax_pos_sp = $this.offset().left;
+			var parallax_pos_pc = $this.offset().top;
 
-			var parallax_pos = $this.offset().top;
-
-			$this.css('transform', 'translateX(' + (current_btm - parallax_pos - (winH / 1.75)) * 0.1 + 'px)');
+			if (isSp) {
+				$this.css('transform', 'translateX(' + -(current_btm - parallax_pos_sp - (winH / 1.75)) * 0.1 + 'px)');
+				console.log('parallax_pos_sp', parallax_pos_sp)
+			} else {
+				$this.css('transform', 'translateX(' + (current_btm - parallax_pos_pc - (winH / 1.75)) * 0.1 + 'px)');
+				console.log('parallax_pos_pc', parallax_pos_pc)
+			}
 
 		});
 	}
