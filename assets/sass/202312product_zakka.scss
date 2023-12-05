@@ -153,6 +153,11 @@ body, html {
       filter: blur(0);
     }
 
+    .main-catch,.yoyaku-ofuda{
+      opacity: 1;
+      clip-path: inset(0 0 0 0);
+    }
+
     .page2-main,
     .page1-main{
       clip-path: inset(0 0 0 0);
@@ -168,18 +173,30 @@ body, html {
     }
 
     .page1{
+      opacity: 1;
+      transform: translateX(0);
       .page-ofuda{
         img{
-          animation: sample_anime01 3s ease 2.3s;
+          animation: sample_anime01 2.8s ease 2.1s;
           opacity: 1;
+
+          @include mq{
+            animation: sample_anime01 2.8s ease 2.3s;
+          }
         }
       }
     }
     .page2{
+      opacity: 1;
+      transform: translateX(0);
       .page-ofuda{
         img{
-          animation: sample_anime02 3s ease 2.3s;
+          animation: sample_anime02 2.8s ease 2.1s;
           opacity: 1;
+
+          @include mq{
+            animation: sample_anime02 2.8s ease 2.3s;
+          }
         }
       }
     }
@@ -199,6 +216,9 @@ body, html {
   top: calc(50/1270)*100%;
   right: calc(38/$base_w_sp)*100%;
   z-index: 4;
+  clip-path: inset(0 0 100% 0);
+  transition: 1s ease 1.4s;
+  opacity: 0;
 }
 .heading{
   display: flex;
@@ -238,9 +258,9 @@ body, html {
 }
 
 .main-ttl-wrapper{
-  position: relative;
- 
+  
   @include mq{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -250,20 +270,23 @@ body, html {
 }
 
 .main-ttl-background{
-  display: block;
-  width: 102%;
-  height: 100%;
-  background-repeat: repeat;
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-
-  img{
-    height: 100vh;
-    -webkit-border-before-width: 100%;
+  display: none;
+  @include mq{
+    display: block;
+    width: 102%;
+    height: 100%;
+    background-repeat: repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  
+    img{
+      height: 100vh;
+      -webkit-border-before-width: 100%;
+    }
   }
 }
 
@@ -275,15 +298,16 @@ body, html {
   transform: translate(-50%,-50%);
   z-index: 3;
   opacity: 0;
-  transition: 1.1s ease;
   filter: blur(10px);
-
+  transition: 1.1s ease 1s;
+  
   @include mq{
     width: calc(442/630)*100%;
     position: relative;
     top: auto;
     left: auto;
     transform: none;
+    transition: 1.1s ease;
   }
 }
 
@@ -298,12 +322,19 @@ body, html {
   // background-color: #7eb8cb;
   position: relative;
   display: block;
+  background: #7eb8cb;
+  opacity: 0;
+  transition:background 1s ease .1s;
+  cursor: pointer;
+
   
 
   @include mq{
     width: calc(1054/$base_w)*100%;
     height: 100vh;
     padding-top: 100vh;
+    transform: scaleX(0);
+    background: transparent;
 
   }
 
@@ -331,6 +362,7 @@ body, html {
   opacity: 0;
   clip-path: inset(0 0 100% 0);
   transition: 1s ease .6s;
+  
 
   @include mq{
     width: 100%;
@@ -340,12 +372,22 @@ body, html {
     left: 0;
     padding: 0;
     margin: 0;
+    img{
+      width: 100%;
+      height: 100vh;
+    }
   }
 
-  img{
-    width: 100%;
-    height: 100vh;
-  }
+}
+
+
+.page-link{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
 }
 
 .page-btn{
@@ -361,16 +403,9 @@ body, html {
   transform: translateX(-50%);
   width: 0;
   transition:all .6s ease 1.6s;
+  z-index: 10;
+  cursor: pointer;
 
-  a{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-  }
-  
   .page-btn-txt{
     width: calc(153/272)*100%;
     display: block;
@@ -432,11 +467,16 @@ body, html {
   height: 50%;
   position: relative;
   display: block;
+  opacity: 0;
+  transition:background 1s ease .1s;
+  background: #f5eac1;
+  cursor: pointer;
 
   @include mq{
     padding-top: 100vh;
     width: calc(1054/$base_w)*100%;
     height: 100vh;
+    background: transparent;
   }
 
   .page-ofuda{
@@ -490,19 +530,25 @@ body, html {
   clip-path: inset(0 0 100% 0);
   transition: 1s ease .6s;
 
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   @include mq{
     position: absolute;
     top: 0;
     left: 0;
     height: 100vh;
     width: 100%;
+    img{
+      object-fit: cover;
+      width: 100%;
+      height: 100vh;
+    }
   }
 
-  img{
-    object-fit: cover;
-    width: 100%;
-    height: 100vh;
-  }
 }
 
 .yoyaku-ofuda{
@@ -510,13 +556,17 @@ body, html {
   position: absolute;
   bottom: calc(53/635)*100%;
   left: calc(40/$base_w_sp)*100%;
-
+  clip-path: inset(0 0 100% 0);
+  transition: 1s ease 1.4s;
+  opacity: 0;
+  
   @include mq{
     width: calc(116/1054)*100%;
     margin-right: calc(57/1054)*100%;
     position: relative;
     bottom: auto;
     left: auto;
+    transition: none;
   }
 }
 

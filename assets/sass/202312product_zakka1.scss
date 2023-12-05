@@ -1840,13 +1840,13 @@ body {
 
               @keyframes kirakira{
                 0%{
-                  transform: rotate(0);
+                  transform: rotateY(0);
                 }
                 50%{
                   transform: rotateY(180deg);
                 }
                 100%{
-                  transform: rotate(0);
+                  transform: rotateY(0);
                 }
               }
             }
@@ -2949,8 +2949,10 @@ body {
           line-height: calc(38/22);
           font-feature-settings: "palt";
           margin-bottom: 20px;
+          margin-left: calc(38px/2);
           @include mq_maxH() {
             margin-bottom: calc((40/1270) * #{$new_vh});
+            margin-left: calc((38/1270) * #{$new_vh});
             font-size: calc((22/1270) * #{$new_vh});
           }
         }
@@ -3051,47 +3053,49 @@ body {
 
 ///西山スタイル
 .mainvisual {
-  margin-left: (100px/2);
-  @media screen and (max-width: 960px) {
+  margin-left: 0;
+  @include mq {
     margin-left: (96px/2);
   }
-  @include mq_maxH() {
-    margin-left: 0;
+  @media screen and (min-width: 960px) {
+    margin-left: (100px/2);
   }
 }
 .footer {
-  margin-right: (100px/2);
-  @media screen and (max-width: 960px) {
+  margin-right: 0;
+  @include mq {
     margin-right: (96px/2);
   }
-  @include mq_maxH() {
-    margin-right: 0;
+  @media screen and (min-width: 960px) {
+    margin-right: (100px/2);
   }
 }
 .scroll-box {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: (1270px/2);
-  pointer-events: none;
-  z-index: 1;
-  display: flex;
-  @include mq_maxH() {
-    display: none;
-  }
+  display: none;
 
-  .block1,
-  .block3 {
-    width: (111px/2);
-    background-image: url(/static/docs/nikoand/pages/202312product_zakka/assets/img/vol1/page1-bg-layer.png);
-    background-size: cover;
-  }
-  .block2 {
+  @include mq{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
-    margin: 0 auto;
-    box-shadow: 1px 1px 20px 7px rgba(0, 0, 0, 0.11);
+    height: (1270px/2);
+    pointer-events: none;
     z-index: 1;
+    display: flex;
+   
+  
+    .block1,
+    .block3 {
+      width: (111px/2);
+      background-image: url(/static/docs/nikoand/pages/202312product_zakka/assets/img/vol1/page1-bg-layer.png);
+      background-size: cover;
+    }
+    .block2 {
+      width: 100%;
+      margin: 0 auto;
+      box-shadow: 1px 1px 20px 7px rgba(0, 0, 0, 0.11);
+      z-index: 1;
+    }
   }
 }
