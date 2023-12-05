@@ -1779,6 +1779,8 @@ body {
             }
             .ph{
               width: calc(630px/2);
+              position: relative;
+              z-index: 3;
               @include mq_maxH() {
                 width: calc((630/1270) * #{$new_vh});
               }
@@ -1809,6 +1811,7 @@ body {
               left: 0;
               margin-top: calc(434px/2);
               margin-left: calc(-132px/2);
+              z-index: 10;
               &.show{
                 img{
                   animation: kirakira 3s ease 1s infinite;
@@ -1914,6 +1917,8 @@ body {
             }
             .ph{
               width: calc(759px/2);
+              position: relative;
+              z-index: 5;
               @include mq_maxH() {
                 width: calc((759/1270) * #{$new_vh});
               }
@@ -1943,6 +1948,7 @@ body {
               right: 0;
               margin-top: calc(754px/2);
               margin-right: calc(174px/2);
+              z-index: 10;
               &.show{
                 img{
                   animation: kirakira 3s ease 2s infinite;
@@ -1974,6 +1980,7 @@ body {
               left: 0;
               margin-top: calc(271px/2);
               margin-left: calc(-105px/2);
+              z-index: 10;
               &.show{
                 img{
                   animation: kirakira 3s ease 1.7s infinite;
@@ -2049,6 +2056,7 @@ body {
               top: 0;
               right: 0;
               margin-right: calc(91px/2);
+              z-index: 10;
 
               &.show{
                 img{
@@ -2174,6 +2182,7 @@ body {
               right: 0;
               margin-top: calc(-138px/2);
               margin-right: calc(-35px/2);
+              z-index: 10;
 
               &.show{
                 img{
@@ -2385,6 +2394,7 @@ body {
               left: 0;
               margin-top: calc(271px/2);
               margin-left: calc(-80px/2);
+              z-index: 10;
               &.show{
                 img{
                   animation: kirakira 3s ease 1.6s infinite;
@@ -2403,6 +2413,7 @@ body {
               left: 0;
               margin-top: calc(869px/2);
               margin-left: calc(441px/2);
+              z-index: 10;
 
               &.show{
                 img{
@@ -2422,6 +2433,7 @@ body {
               left: 0;
               margin-top: calc(-146px/2);
               margin-left: calc(532px/2);
+              z-index: 10;
               &.show{
                 img{
                   animation: kirakira 3s ease 1.5s infinite;
@@ -2506,6 +2518,7 @@ body {
               right: 0;
               margin-top: calc(-251px/2);
               margin-right: calc(66px/2);
+              z-index: 10;
 
               &.show{
                 img{
@@ -2723,6 +2736,7 @@ body {
           width: calc(89px/2);
           margin-top: calc(439px/2);
           margin-right: calc(-188px/2);
+          z-index: 10;
 
           &.show{
             img{
