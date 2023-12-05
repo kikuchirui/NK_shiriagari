@@ -130,12 +130,17 @@ body {
 	&.noscroll {
 	  overflow: hidden;
 	}
-	&.scroll {
-	  overflow: auto;
-	}
 }
 
 .g-container {
+  opacity: 0;
+  visibility: hidden;
+  transition:opacity 1s ease,visibility 1s ease;
+
+  &.show{
+    opacity: 1;
+    visibility: visible;
+  }
   &.scrollable-vertical { ////縦スクロールで横にスクロールさせる。
     height: 1000vh;
   }
@@ -281,10 +286,15 @@ body {
             transition: .3s ease;
             position: absolute;
             right: 5.5px;
-            top: 7px;
+            top: 50%;
+            transform: translateY(-50%);
             display: inline-block;
             width: 5px;
+            height: 4.5px;
 
+            img{
+              vertical-align: top;
+            }
           }
         }
 
@@ -707,6 +717,7 @@ body {
               }
               .price {
                 margin-right: (30px/2);
+                @include DNPShueiMinPr6N_B();
                 @include mq_maxH() {
                   margin-right: calc((30 / 1270) * #{$new_vh});
                 }
@@ -715,6 +726,7 @@ body {
                   font-size: 10px;
                   display: inline-block;
                   margin-left: 5.5px;
+                  @include DNPShueiMinPr6N_B();
                   @include mq_maxH() {
                     font-size: calc((20/ 1270) * #{$new_vh});
                     margin-left: calc((11/ 1270) * #{$new_vh});

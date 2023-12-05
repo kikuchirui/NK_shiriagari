@@ -312,8 +312,11 @@ body, html {
 }
 
 .page1,.page2{
- 
-
+  @include mq{
+    &:hover{
+      filter: brightness(0.6);
+    }
+  }
 }
 
 
@@ -324,7 +327,7 @@ body, html {
   display: block;
   background: #7eb8cb;
   opacity: 0;
-  transition:background 1s ease .1s;
+  transition:background 1s ease .1s, filter .4s ease;
   cursor: pointer;
 
   
@@ -468,7 +471,7 @@ body, html {
   position: relative;
   display: block;
   opacity: 0;
-  transition:background 1s ease .1s;
+  transition:background 1s ease .1s,filter .4s ease;
   background: #f5eac1;
   cursor: pointer;
 

@@ -22,7 +22,6 @@ $(function () {
 	// 3.ブラウザのサイズが変更された時・画面の向きを変えた時に再計算する
 	window.addEventListener('resize', setHeight);
 
-	$body.addClass('noscroll');
 
 	$win.width() < breakPoint && (isSp = !0);
 	$win.on({
@@ -31,6 +30,7 @@ $(function () {
 			winW = $win.width();
 			current_pos = $win.scrollTop();
 
+			$container.addClass("show");
 			$scrollContents.addClass("scrollable");
 			$scrollInner.addClass("show");
 			$body.removeClass('noscroll');
@@ -120,14 +120,17 @@ $(function () {
 
 		$('.modal-link').click(function () {
 			$modal.addClass('show');
+			$body.addClass('noscroll');
 		});
 		$modal.click(function (e) {
 			if (!$(e.target).closest('.modal').length) {
 				$modal.removeClass('show');
+				$body.removeClass('noscroll');
 			}
 		})
 		$('.close-btn').click(function () {
 			$modal.removeClass('show');
+			$body.removeClass('noscroll');
 		});
 	}
 
