@@ -815,17 +815,32 @@ body {
               top: 0;
               left: 0;
               margin-top: (115px/2);
-              transform: translateX(-30px);
               transition:all 1.4s ease;
               opacity: 0;
+              animation: crownAnim 5s ease-in-out infinite;
 
               &.show{
-                transform: none;
+               
                 opacity: 1;
               }
               @include mq_maxH() {
                 width: calc((263/1270) * #{$new_vh});
                 margin-top: calc((115/1270) * #{$new_vh});
+              }
+
+              @keyframes crownAnim{
+                0%{
+                  transform: translateX(-10px);
+                }
+
+                50%{
+                  transform: translateX(10px);
+                }
+                100%{
+                  transform: translateX(-10px);
+                }
+
+               
               }
             }
           }
