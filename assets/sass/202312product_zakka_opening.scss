@@ -361,12 +361,21 @@ body, html {
   transform: translateX(-50%);
   width: 0;
   transition:all .6s ease 1.6s;
+
+  a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+  }
   
   .page-btn-txt{
     width: calc(153/272)*100%;
     display: block;
     margin: 0 auto;
-    transition:opacity .6s ease 2s;
+    transition:opacity .6s ease 2s,transform .5s ease;
     opacity: 0;
   }
 
