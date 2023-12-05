@@ -667,6 +667,14 @@ body {
           height: calc(1082px / 2);
           border-radius: calc(30px / 2);
           border: 0.5px solid #000;
+          transform: translateY(-30px);
+          transition: .5s ease;
+          opacity: 0;
+
+          &.show{
+            transform: translateY(0);
+            opacity: 1;
+          }
 
           @include mq_maxH() {
             width: calc((632 / 1270) * #{$new_vh});
@@ -761,10 +769,12 @@ body {
             position: relative;
             z-index: 2;
             filter: blur(10px);
-            transition: 0.5s ease-in-out;
+            transition: 0.5s ease-in-out .3s,opacity 0.5s ease-in-out .2s;
+            opacity: 0;
 
             &.show {
               filter: blur(0);
+              opacity: 1;
             }
             a {
               img {
@@ -785,10 +795,10 @@ body {
           }
           .txt-contents {
             margin: calc(804px / 2) auto 0;
-            width: calc(549px / 2);
+            width: calc(565px / 2);
             @include mq_maxH() {
               margin: calc((804 / 1270) * #{$new_vh}) auto 0;
-              width: calc((549 / 1270) * #{$new_vh});
+              width: calc((565 / 1270) * #{$new_vh});
             }
             .name {
               @include DNPShueiMinPr6N_B();
@@ -1264,16 +1274,28 @@ body {
 
           @include mq {
             &:hover {
-              opacity: 0.6;
+              color: #fff;
+              background: #343c55;
+
+              .insta-icon{
+                background-image: url(/static/docs/nikoand/pages/202312product_zakka/assets/img/vol1/insta-icon-hover.png);
+              }
             }
           }
 
           .insta-icon {
             width: calc(47px / 2);
+            height: calc(47px/2);
             display: block;
             margin-right: calc(25px / 2);
+            background-image: url(/static/docs/nikoand/pages/202312product_zakka/assets/img/vol1/insta-icon.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            transition: 0.3s ease;
+
             @include mq_maxH() {
               width: calc((47 / 1270) * #{$new_vh});
+              height: calc((47 / 1270) * #{$new_vh});
               margin-right: calc((25 / 1270) * #{$new_vh});
             }
           }
@@ -1307,11 +1329,13 @@ body {
             font-size: calc((28 / 1270) * #{$new_vh});
           }
 
-          @include mq {
+          @include mq{
             &:hover {
-              opacity: 0.6;
+              color: #fff;
+              background: #343c55;
             }
           }
+
         }
       }
 
