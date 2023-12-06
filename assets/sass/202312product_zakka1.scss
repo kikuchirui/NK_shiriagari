@@ -1712,9 +1712,9 @@ body {
               }
               
               .detail{
-                width: calc(527px/2);
+                width: calc(525px/2);
                 @include mq_maxH() {
-                  width: calc((527/1270) * #{$new_vh});
+                  width: calc((525/1270) * #{$new_vh});
                 }
               }
             }
