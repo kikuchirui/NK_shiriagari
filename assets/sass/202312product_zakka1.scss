@@ -785,9 +785,9 @@ body {
             }
 
             .detail{
-              width:calc(319px/2);
+              width:calc(345px/2);
               @include mq_maxH() {
-                width: calc((319 / 1270) * #{$new_vh});
+                width: calc((345 / 1270) * #{$new_vh});
               }
             }
 
