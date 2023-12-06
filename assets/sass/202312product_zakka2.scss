@@ -677,7 +677,7 @@ body {
         align-items: center;
         position: relative;
         z-index: 3;
-        gap: calc(650px / 2);
+        gap: calc(700px / 2);
         background-image: url(/static/docs/nikoand/pages/202312product_zakka/assets/img/vol2/illust-background.jpg);
         background-size: 100% 100%;
         background-position: 0 0;
@@ -685,7 +685,7 @@ body {
 
         height: 100%;
         @include mq_maxH() {
-          gap: calc((650 / 1270) * #{$new_vh});
+          gap: calc((700 / 1270) * #{$new_vh});
         }
         .item-block {
           position: relative;
@@ -1088,6 +1088,23 @@ body {
                 width: calc((703 / 1270) * #{$new_vh});
                 top: calc((54 / 1270) * #{$new_vh});
                 left: calc((-45 / 1270) * #{$new_vh});
+              }
+            }
+
+            .credit{
+              margin-left: calc(-12px/2);
+
+              @include mq_maxH() {
+                margin-left: calc((-12/1270) * #{$new_vh});
+               
+              }
+            }
+
+            .credit1{
+              margin-bottom: calc(8px/2);
+              @include mq_maxH() {
+                margin-bottom: calc((8/1270) * #{$new_vh});
+               
               }
             }
           }
@@ -1684,12 +1701,13 @@ body {
   align-items: center;
   position: relative;
   z-index: 3;
-  gap: calc(650px / 2);
+  gap: calc(700px / 2);
   height: 100%;
   transition: 0.1s ease;
   // margin-left: 100px;
   @include mq_maxH() {
-    // margin-left: calc((97 / 1270) * #{$new_vh});
+
+    gap: calc((700 / 1270) * #{$new_vh});
     // margin-left: calc((150 / 1270) * #{$new_vh});
   }
 }
