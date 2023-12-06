@@ -313,8 +313,13 @@ body, html {
 
 .page1,.page2{
   @include mq{
+
     &:hover{
       filter: brightness(0.6);
+
+      .page-btn-txt{
+        transform: scale(1.05);
+      }
     }
   }
 }
@@ -417,13 +422,6 @@ body, html {
     opacity: 0;
   }
 
-  @include mq{
-    &:hover{
-      .page-btn-txt{
-        transform: scale(1.05);
-      }
-    }
-  }
 
 }
 
