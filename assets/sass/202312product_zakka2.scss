@@ -431,9 +431,14 @@ body {
         height: 100%;
       }
 
+      .mainvisual-wrapper{
+        position: relative;
+        height: 100%;
+      }
+
       .mainvisual {
         //メインビジュアル
-        min-width: calc(750px / 2);
+        min-width: 100vw;
         height: 100%;
         position: relative;
         display: flex;
@@ -442,9 +447,13 @@ body {
         position: relative;
         z-index: 10;
         background: #f4e9bf;
-        @include mq_maxH() {
-          min-width: calc((750 / 1270) * #{$new_vh});
+        
+        @include mq{
+          min-width: calc(750px / 2);
         }
+        // @include mq_maxH() {
+        //   min-width: 100vw;
+        // }
 
         &.show {
           .heading,.yoyaku {
@@ -529,6 +538,7 @@ body {
           opacity: 0;
           filter: blur(10px);
           transition:opacity 0.8s ease 0.2s,filter .8s ease .2s;
+          z-index: 5;
 
           @include mq_maxH() {
             width: calc((348 / 1270) * #{$new_vh});
@@ -544,6 +554,7 @@ body {
           opacity: 0;
           clip-path: inset(0 0 100% 0);
           transition:clip-path 0.7s ease .5s,opacity .8s ease .5s,filter .8s ease .5s;
+          z-index: 5;
           // filtser: blur(4px);
           @include mq_maxH() {
             width: calc((107 / 1270) * #{$new_vh});
@@ -631,10 +642,23 @@ body {
           margin-top: calc(-19px / 2);
           cursor: pointer;
           transition: 0.5s ease;
+          animation: btnScale 1.3s ease 2s infinite;
           @include mq_maxH() {
             width: calc((28 / 1270) * #{$new_vh});
             height: calc((28 / 1270) * #{$new_vh});
             margin-top: calc((-19 / 1270) * #{$new_vh});
+          }
+
+          @keyframes btnScale{
+            0%{
+              transform: scale(1);
+            }
+            50%{
+              transform: scale(1.1);
+            }
+            100%{
+              transform: scale(1);
+            }
           }
           .plus {
             display: block;
@@ -647,10 +671,16 @@ body {
 
             img {
               vertical-align: top;
+              animation:  rotateCircle 2.5s linear infinite;
             }
             @include mq_maxH() {
               width: calc((11 / 1270) * #{$new_vh});
               height: calc((11 / 1270) * #{$new_vh});
+            }
+
+            @keyframes rotateCircle {
+              0%   { transform: rotate(0deg); }
+              100% { transform: rotate(360deg); }
             }
           }
         }
@@ -677,7 +707,7 @@ body {
         align-items: center;
         position: relative;
         z-index: 3;
-        gap: calc(700px / 2);
+        // gap: calc(700px / 2);
         background-image: url(/static/docs/nikoand/pages/202312product_zakka/assets/img/vol2/illust-background.jpg);
         background-size: 100% 100%;
         background-position: 0 0;
@@ -685,7 +715,7 @@ body {
 
         height: 100%;
         @include mq_maxH() {
-          gap: calc((700 / 1270) * #{$new_vh});
+          // gap: calc((700 / 1270) * #{$new_vh});
         }
         .item-block {
           position: relative;
@@ -910,10 +940,10 @@ body {
               }
             }
 
-            // margin-left: 432.2px;
+            margin-left: calc(514px/2);
             // margin-left: 257px;
             @include mq_maxH() {
-              // margin-left: calc((514 / 1270) * #{$new_vh});
+              margin-left: calc((514 / 1270) * #{$new_vh});
             }
           }
 
@@ -1156,21 +1186,45 @@ body {
 
       .info {
         min-width: calc(750px / 2);
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right:0;
+        z-index: 5;
+        // margin-left: calc(784px/2);
         @include mq_maxH() {
           min-width: calc((750 / 1270) * #{$new_vh});
+        }
+
+        &::before{
+          content: '';
+          display: block;
+          width: 100%;
+          height: 100%;
+          background: #000;
+          opacity: 0.2;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 3;
+
         }
 
         .info-heading {
           @include DNPShueiMinPr6N_B();
           font-size: 10px;
           color: #fff;
-          margin-top: calc(63px / 2);
+          position: relative;
+          z-index: 5;
+          // margin-top: calc(63px / 2);
           @include mq_maxH() {
             font-size: calc((20 / 1270) * #{$new_vh});
-            margin-top: calc((63 / 1270) * #{$new_vh});
+            // margin-top: calc((63 / 1270) * #{$new_vh});
           }
         }
 
@@ -1182,6 +1236,8 @@ body {
           margin-top: calc(27px / 2);
           margin-bottom: calc(52px / 2);
           line-height: calc(48 / 36);
+          position: relative;
+          z-index: 5;
           @include mq_maxH() {
             font-size: calc((36 / 1270) * #{$new_vh});
             margin-top: calc((27 / 1270) * #{$new_vh});
@@ -1193,6 +1249,8 @@ body {
           width: calc(269px / 2);
           position: relative;
           margin-bottom: calc(50px / 2);
+          position: relative;
+          z-index: 5;
           @include mq_maxH() {
             width: calc((269 / 1270) * #{$new_vh});
             margin-bottom: calc((50 / 1270) * #{$new_vh});
@@ -1310,6 +1368,7 @@ body {
           margin-bottom: calc(31px / 2);
           transition: 0.3s ease;
           position: relative;
+          z-index: 5;
           @include mq_maxH() {
             width: calc((563 / 1270) * #{$new_vh});
             margin-bottom: calc((31 / 1270) * #{$new_vh});
@@ -1391,6 +1450,7 @@ body {
           font-size: 14px;
           transition: 0.3s ease;
           position: relative;
+          z-index: 5;
 
           @include mq_maxH() {
             width: calc((563 / 1270) * #{$new_vh});
@@ -1434,10 +1494,12 @@ body {
         background: #7eb8cb;
         position: relative;
         z-index: 100;
+        overflow: hidden;
         @include mq_maxH() {
           min-width: calc((752 / 1270) * #{$new_vh});
           height: calc((1270 / 1270) * #{$new_vh});
         }
+        
 
         .footer-main-img {
           width: 100%;
@@ -1445,6 +1507,7 @@ body {
           margin-top: calc(94px / 2);
           margin-left: calc(85px / 2);
           width: calc(658px / 2);
+          transition: transform .5s ease;
 
           @include mq_maxH() {
             width: calc((658 / 1270) * #{$new_vh});
@@ -1463,6 +1526,13 @@ body {
               left: calc((-44 / 1270) * #{$new_vh});
             }
           }
+
+          @include mq{
+            &:hover{
+              transform: scale(1.02);
+            } 
+          }
+
         }
 
         .footer-txt {
@@ -1488,7 +1558,7 @@ body {
           display: block;
           width: fit-content;
           position: relative;
-          margin-bottom: calc(95px / 2);
+          margin-bottom: calc(49px / 2);
           transition: 0.3s ease;
 
           &:hover {
@@ -1507,7 +1577,7 @@ body {
             }
           }
           @include mq_maxH() {
-            margin-bottom: calc((95 / 1270) * #{$new_vh});
+            margin-bottom: calc((49 / 1270) * #{$new_vh});
             font-size: calc((28 / 1270) * #{$new_vh});
           }
 
@@ -1582,7 +1652,8 @@ body {
 
     .modal {
       width: calc(550px / 2);
-      height: calc(593px / 2);
+      // height: calc(593px / 2);
+      height: 268.5px;
       position: fixed;
       top: 50%;
       left: 50%;
@@ -1608,7 +1679,8 @@ body {
     .modal-inner {
       border: 1px solid #d6db51;
       width: calc(500px / 2);
-      height: calc(547px / 2);
+      // height: calc(547px / 2);
+      height: 244.5px;
       position: relative;
     }
     .close-btn {
@@ -1627,6 +1699,7 @@ body {
       right: calc(48px / 2);
       top: calc(-38px / 2);
     }
+
 
     .prof-ttl {
       @include DNPShueiMinPr6N_B();
@@ -1679,13 +1752,13 @@ body {
     z-index: 1;
     display: flex;
 
-    .block1,
-    .block3 {
+    .scroll-block1,
+    .scroll-block3 {
       width: (111px/2);
       background-image: url(/static/docs/nikoand/pages/202312product_zakka/assets/img/vol2/vol2-yaler.png);
       background-size: cover;
     }
-    .block2 {
+    .scroll-block2 {
       width: 100%;
       margin: 0 auto;
       box-shadow: 1px 1px 20px 7px rgba(0, 0, 0, 0.11);
@@ -1701,13 +1774,13 @@ body {
   align-items: center;
   position: relative;
   z-index: 3;
-  gap: calc(700px / 2);
+  gap: calc( 280px / 2);
   height: 100%;
   transition: 0.1s ease;
-  // margin-left: 100px;
+  margin-right: 140px;
   @include mq_maxH() {
 
-    gap: calc((700 / 1270) * #{$new_vh});
-    // margin-left: calc((150 / 1270) * #{$new_vh});
+    gap: calc((290 / 1270) * #{$new_vh});
+    margin-right: calc((280 / 1270) * #{$new_vh});
   }
 }

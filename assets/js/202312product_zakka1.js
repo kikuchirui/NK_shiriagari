@@ -65,12 +65,14 @@ $(function () {
 		}
 	});
 
-	$(".main-visual").click(function() {
+	$(".mainvisual").click(function () {
 		if (winW <= 768) {
-		  var scrollTarget = $(".main-lead").offset().left - 40 - $scrollContents.offset().left;
-		  $scrollContents.animate({ scrollLeft: scrollTarget }, "slow");
+			$scrollContents = $('.scroll-contents')
+			var scrollTarget = $(".block1").offset().left - 20 - $scrollContents.offset().left;
+			$scrollContents.animate({ scrollLeft: scrollTarget }, "slow");
+			console.log(scrollTarget);
 		}
-	});	  
+	});
 
 	//pcの場合呼び出される
 	function scrollFunction() {
@@ -132,6 +134,8 @@ $(function () {
 			$body.removeClass('noscroll');
 		});
 	}
+
+
 
 
 	

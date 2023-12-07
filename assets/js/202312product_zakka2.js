@@ -51,6 +51,7 @@ $(function () {
 				});
 			}
 
+
 			scrollFunction();
 			modalToggle();
 			// $('[data-speed]').each(function(){
@@ -74,10 +75,12 @@ $(function () {
 		}
 	});
 
-	$(".main-visual").click(function () {
+	$(".mainvisual").click(function () {
 		if (winW <= 768) {
-			var scrollTarget = $(".main-lead").offset().left - 40 - $scrollContents.offset().left;
+			$scrollContents = $('.scroll-contents')
+			var scrollTarget = $(".block1").offset().left - 90 - $scrollContents.offset().left;
 			$scrollContents.animate({ scrollLeft: scrollTarget }, "slow");
+			console.log(scrollTarget);
 		}
 	});
 
@@ -142,27 +145,56 @@ $(function () {
 		});
 	}
 
+	// var $parallax = $('.item-parallax');
+	// if ($parallax.length) {
+	// 	parallax();
+	// 	$scrollContents.on('scroll', parallax);
+	// }
+	// function parallax() {
+	// 	$parallax.each(function () {
+	// 		var $this = $(this);
+	// 		var parallax_pos_sp = $this.offset().left;
+	// 		var parallax_pos_pc = $this.offset().top;
+
+	// 		if (isSp) {
+	// 			$this.css('transform', 'translateX(' + -(current_btm - parallax_pos_sp - (winH / 1.75)) * 0.1 + 'px)');
+	// 			console.log('parallax_pos_sp', parallax_pos_sp,winH)
+	// 		} else {
+	// 			$this.css('transform', 'translateX(' + (current_btm - parallax_pos_pc - (winH / 1.75)) * 0.1 + 'px)');
+	// 			console.log('parallax_pos_pc', parallax_pos_pc,winH)
+	// 		}
+
+	// 	});
+	// }
+
 	var $parallax = $('.item-parallax');
-	if ($parallax.length) {
-		parallax();
-		$scrollContents.on('scroll', parallax);
-	}
-	function parallax() {
-		$parallax.each(function () {
-			var $this = $(this);
-			var parallax_pos_sp = $this.offset().left;
-			var parallax_pos_pc = $this.offset().top;
+if ($parallax.length) {
+    parallax();
+    $scrollContents.on('scroll', parallax);
+}
 
-			if (isSp) {
-				$this.css('transform', 'translateX(' + -(current_btm - parallax_pos_sp - (winH / 1.75)) * 0.1 + 'px)');
-				console.log('parallax_pos_sp', parallax_pos_sp)
-			} else {
-				$this.css('transform', 'translateX(' + (current_btm - parallax_pos_pc - (winH / 1.75)) * 0.1 + 'px)');
-				console.log('parallax_pos_pc', parallax_pos_pc)
-			}
+function parallax() {
+    $parallax.each(function () {
+        var $this = $(this);
+        var parallax_pos_sp = $this.offset().left;
+        var parallax_pos_pc = $this.offset().top;
 
-		});
-	}
+        var parallax_factor = 0.1; // 移動量の調整係数
+
+        if (isSp) {
+            $this.css('transform', 'translateX(' + -(current_btm - parallax_pos_sp - (winH / 1.75)) * parallax_factor + 'px)');
+            // console.log('parallax_pos_sp', parallax_pos_sp, winH);
+        } else {
+            // 画面が1440pxの場合と同じくらいの移動量にする
+            var screenWidth = 1200; // 画面の幅
+            var factor = screenWidth / $(window).width(); // 調整係数
+            $this.css('transform', 'translateX(' + (current_btm - parallax_pos_pc - (winH / 1.75)) * parallax_factor * factor + 'px)');
+            // console.log('parallax_pos_pc', parallax_pos_pc, winH);
+        }
+    });
+}
+
+
 
 	// function parallax(obj){
     //     var targetObj = obj,
