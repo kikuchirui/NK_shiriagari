@@ -1052,6 +1052,7 @@ body {
             @include mq_maxH() {
               margin-top: calc((288/1270) * #{$new_vh});
             }
+            
             .ph{
               width: calc(582px/2);
               @include mq_maxH() {
@@ -1061,7 +1062,7 @@ body {
 
             .ph1{
               &.show{
-                animation: appear1 3s steps(2) .5s  infinite;
+                animation: appear1 3s steps(2) infinite;
               }
             }
             .ph2{
@@ -1069,7 +1070,7 @@ body {
               top: 0;
               left: 0;
               &.show{
-                animation: appear2 3s steps(2) .5s infinite;
+                animation: appear2 3s steps(2) infinite;
               }
             }
             
@@ -1078,7 +1079,7 @@ body {
               top: 0;
               left: 0;
               &.show{
-                animation: appear3 3s steps(2) .5s infinite;
+                animation: appear3 3s steps(2) infinite;
               }
             }
 
@@ -1266,6 +1267,18 @@ body {
               margin-left: calc((83/1270) * #{$new_vh});
             }
 
+            &.show{
+              .ph1{
+                animation: appear1 3s steps(2) infinite;
+              }
+              .ph2{
+                animation: appear2 3s steps(2) infinite;
+              }
+              .ph3{
+                animation: appear3 3s steps(2) infinite;
+              }
+            }
+
 
             
             .ph1{
@@ -1275,7 +1288,7 @@ body {
               // filter: blur(10px);
               &.show{
                 // filter: blur(0);
-                animation: appear1 3s steps(2) infinite;
+                // animation: appear1 3s steps(2) infinite;
               }
               @include mq_maxH() {
                 width: calc((850/1270) * #{$new_vh});
@@ -1292,7 +1305,7 @@ body {
               
               &.show{
                 // opacity: 1;
-                animation: appear2 3s steps(2) infinite;
+                // animation: appear2 3s steps(2) infinite;
               }
 
               @include mq_maxH() {
@@ -1312,7 +1325,7 @@ body {
               // filter: blur(0);
               &.show{
                 // opacity: 1;
-                animation: appear3 3s steps(2) infinite;
+                // animation: appear3 3s steps(2) infinite;
               }
               @include mq_maxH() {
                 width: calc((590/1270) * #{$new_vh});
