@@ -312,12 +312,11 @@ body {
     position: fixed;
     left: 0;
     top: 0;
-    // opacity: 0;
-    // visibility: hidden;
-
     background-image: url(/static/docs/nikoand/pages/202312product_zakka/assets/img/vol2/vol2-yaler.png);
-    background-size: cover;
-    // background-attachment: fixed;
+    background-size: 100px 100px;
+    background-repeat: repeat;
+    width: 100%;
+    height: 100%;
 
     .pc-link {
       display: none;
@@ -1756,7 +1755,8 @@ body {
     .scroll-block3 {
       width: (111px/2);
       background-image: url(/static/docs/nikoand/pages/202312product_zakka/assets/img/vol2/vol2-yaler.png);
-      background-size: cover;
+      background-size: 100px 100px;
+      background-repeat: repeat;
     }
     .scroll-block2 {
       width: 100%;
