@@ -921,6 +921,13 @@ body {
                   }
                 }
               }
+
+              .coming{
+                width: calc(185px/2);
+                @include mq_maxH() {
+                  width: calc((185 / 1270) * #{$new_vh});
+                }
+              }
             }
             .credit1{
               margin-bottom: calc(8px/2);

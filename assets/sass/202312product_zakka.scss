@@ -418,11 +418,11 @@ body, html {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 10;
+  z-index: 100;
 }
 
 .page-btn{
-  padding: calc(16/1054)*100% 0 calc(23/1054)*100% 0;
+  padding: calc(23/1054)*100% 0 calc(23/1054)*100% 0;
   background: #fff;
   border: 1px solid #000;
   border-radius: 36px;
