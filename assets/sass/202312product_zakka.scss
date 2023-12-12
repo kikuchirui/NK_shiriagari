@@ -403,7 +403,7 @@ body, html {
   left: calc(56/1054)*100%;
   opacity: 0;
   clip-path: inset(0 0 100% 0);
-  transition:opacity 1s ease .4s,clip-path 1s ease .5s;
+  transition:opacity 1s ease,clip-path 1s ease;
 
   img{
     width: 100%;
