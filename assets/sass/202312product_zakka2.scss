@@ -605,12 +605,17 @@ body {
           clip-path: inset(0 100% 0 0);
           transition:clip-path .6s ease 1s,opacity 1s ease 1s;
           padding-top: 10px;
-          z-index: 5;
+          padding-right: 5px;
+          z-index: 10;
+          width: calc(296px/2);
+          z-index: 10;
 
           @include mq_maxH() {
+            width: calc((296/1270) * #{$new_vh});
             left: calc((616 / 1270) * #{$new_vh});
             top: calc((160 / 1270) * #{$new_vh});
             padding-top: calc((20 / 1270) * #{$new_vh});
+            padding-right: calc((5 / 1270) * #{$new_vh});
           }
 
           &:hover {
@@ -917,6 +922,13 @@ body {
                 }
               }
             }
+            .credit1{
+              margin-bottom: calc(8px/2);
+              @include mq_maxH() {
+                margin-bottom: calc((8/1270) * #{$new_vh});
+               
+              }
+            }
             .credit-wrap {
               display: flex;
               gap: calc(36px / 2);
@@ -1090,6 +1102,22 @@ body {
                 left: calc((-121 / 1270) * #{$new_vh});
               }
             }
+
+            .txt-contents{
+              margin-top: calc(760px/2);
+
+              @include mq_maxH() {
+                margin-top: calc((760 / 1270) * #{$new_vh});
+              }
+            }
+
+            .credit{
+              margin-left: calc(-10px/2);
+
+              @include mq_maxH() {
+                margin-left: calc((-10 / 1270) * #{$new_vh});
+              }
+            }
           }
           &.block10 {
             .ph {
@@ -1125,14 +1153,6 @@ body {
 
               @include mq_maxH() {
                 margin-left: calc((-12/1270) * #{$new_vh});
-               
-              }
-            }
-
-            .credit1{
-              margin-bottom: calc(8px/2);
-              @include mq_maxH() {
-                margin-bottom: calc((8/1270) * #{$new_vh});
                
               }
             }

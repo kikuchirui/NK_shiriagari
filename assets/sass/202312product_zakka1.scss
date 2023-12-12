@@ -471,6 +471,7 @@ body {
           @include mq_maxH() {
             width: calc((778/1270) * #{$new_vh});
             margin-top: calc((363/1270) * #{$new_vh});
+            // margin-right: auto;
           }
        }
 
@@ -529,16 +530,19 @@ body {
         display: flex;
         position: absolute;
         bottom: calc(145px/2);
-        left: calc(557px/2);
+        right: calc(-57px/2);
         cursor: pointer;
         opacity: 0;
         clip-path: inset(0 100% 0 0);
         transition:clip-path 1s ease .9s,opacity 1s ease .9s;
         padding-top: 4%;
         padding-right: 2%;
+        width: calc(278px/2);
+        z-index: 10;
 
         @include mq_maxH() {
-          left: calc((557/1270) * #{$new_vh});
+          width: calc((278/1270) * #{$new_vh});
+          right: calc((-57/1270) * #{$new_vh});
           bottom: calc((145/1270) * #{$new_vh});
         }
 
@@ -2961,73 +2965,73 @@ body {
 
         .deco-illust1{
           position: absolute;
-          top: calc(328px/2);
-          left: calc(-56px/2);
+          top: calc(388px/2);
+          left: calc(-87px/2);
           width: calc(186px/2);
           transform: translateX(-6px);
-          transition: 1s ease .8s;
+          transition: 1s ease .2s;
           z-index: 10;
           &.show{
             transform: translateX(0px);
           }
 
           img{
-            animation: usagiAnim2 3s steps(1) 1.6s infinite;
+            animation: usagiAnim2 3s steps(1) 1.3s infinite;
           }
           @include mq_maxH() {
             width: calc((186/1270) * #{$new_vh});
-            top: calc((328/1270) * #{$new_vh});
-            left: calc((-56/1270) * #{$new_vh});
+            top: calc((388/1270) * #{$new_vh});
+            left: calc((-87/1270) * #{$new_vh});
           }
         }
         .deco-illust2{
           width: calc(156px/2);
           position: absolute;
-          top: calc(333px/2);
-          right: calc(-36px/2);
+          top: calc(397px/2);
+          right: calc(-71px/2);
           transform: translateX(6px);
-          transition: 1s ease .8s;
+          transition: 1s ease .2s;
           z-index: 10;
           &.show{
             transform: translateX(0px);
           }
 
           img{
-            animation: kaeruAnim 3s steps(1) 1.6s infinite;
+            animation: kaeruAnim 3s steps(1) 1.3s infinite;
           }
           @include mq_maxH() {
             width: calc((156/1270) * #{$new_vh});
-            top: calc((333/1270) * #{$new_vh});
-            right: calc((-36/1270) * #{$new_vh});
+            top: calc((397/1270) * #{$new_vh});
+            right: calc((-71/1270) * #{$new_vh});
           }
         }
-        .deco-illust3{
-          width: calc(224px/2);
-          position: absolute;
-          top: calc(75px/2);
-          left: calc(25px/2);
-          transition:all 1s ease .1s;
-          overflow: hidden;
-          z-index: 10;
+        // .deco-illust3{
+        //   width: calc(224px/2);
+        //   position: absolute;
+        //   top: calc(75px/2);
+        //   left: calc(25px/2);
+        //   transition:all 1s ease .1s;
+        //   overflow: hidden;
+        //   z-index: 10;
 
-          img{
-            transition:transform 1s ease .1s,opacity 1s ease .1s;
-            transform: translateY(-20%);
-            opacity: 0;
-          }
+        //   img{
+        //     transition:transform 1s ease .1s,opacity 1s ease .1s;
+        //     transform: translateY(-20%);
+        //     opacity: 0;
+        //   }
 
-          &.show{
-            img{
-              transform: translateY(0%);
-              opacity: 1;
-            }
-          }
-          @include mq_maxH() {
-            width: calc((224/1270) * #{$new_vh});
-            top: calc((75/1270) * #{$new_vh});
-            left: calc((25/1270) * #{$new_vh});
-          }
-        }
+        //   &.show{
+        //     img{
+        //       transform: translateY(0%);
+        //       opacity: 1;
+        //     }
+        //   }
+        //   @include mq_maxH() {
+        //     width: calc((224/1270) * #{$new_vh});
+        //     top: calc((75/1270) * #{$new_vh});
+        //     left: calc((25/1270) * #{$new_vh});
+        //   }
+        // }
 
         .deco-kirakira1{
           position: absolute;
